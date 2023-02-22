@@ -1,14 +1,15 @@
  ##### [<em>__Created By:__ Karim Shehata</em>](https://www.linkedin.com/in/karim-shehata-74b15b178/)
  ##### <em>__Creation Date:__ February 22, 2023</em> 
 
-- [Introduction]({#ise-network-device-tacacs-administration})
+- [Introduction]({#device-tacacs-administration})
 - [Cisco ISE Configuration]({#cisco-ise-configuration})
 - [Cisco Switch Configuration]({#cisco-switch-configuration})
 - [Verification](#verification)
 - [Conclusion](#Conclusion)
 - [Reference](#Reference)
 
-# [<em>Devices TACACS Administrations</em>](https://www.youtube.com/channel/UChYZfbY3bskumyaL7t0NQ4w) <a name="ise-network-device-tacacs-administration"></a>
+
+# [<em>Devices TACACS Administrations</em>](https://www.youtube.com/channel/UChYZfbY3bskumyaL7t0NQ4w) <a name="device-tacacs-administration"></a>
 <p align="justify">
 TACACS+ (Terminal Access Controller Access-Control System Plus) is a security protocol that is used to provide centralized authentication, authorization, and accounting services for network devices. TACACS+ allows network administrators to control access to their network devices by using a centralized server to manage user and device authentication and authorization.
 
