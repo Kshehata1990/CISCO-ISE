@@ -1,7 +1,5 @@
-#### <em>__Creation Date:__ February 22, 2023</em>  
-#### <em>__Created By:__ Karim Shehata</em>  
-
-
+ ##### [<em>__Created By:__ Karim Shehata</em>](https://www.linkedin.com/in/karim-shehata-74b15b178/)
+ ##### <em>__Creation Date:__ February 22, 2023</em> 
 
 - [Introduction]({#ise-network-device-tacacs-administration})
 - [Cisco ISE Configuration]({#cisco-ise-configuration})
@@ -332,11 +330,9 @@ This document is designed to provide helpful guidance for configuring TACACS+ on
 [2] Center for Internet Security. (2022). CIS Cisco IOS 16 Benchmark Recommendations Management Plane.  
 https://www.cisecurity.org/benchmark/cisco
 
-<div align="right">
-  <a href="https://twitter.com/yourhandle"><img src="https://img.icons8.com/color/48/000000/twitter--v2.png"/></a>
-  <a href="https://www.linkedin.com/in/yourprofile"><img src="https://img.icons8.com/color/48/000000/linkedin.png"/></a>
-  <a href="https://github.com/yourusername"><img src="https://img.icons8.com/ios-filled/50/000000/github.png"/></a>
-  <a href="https://www.youtube.com/channel/yourchannel"><img src="https://img.icons8.com/color/48/000000/youtube-play.png"/></a>
+<div align="center">
+  <a href="https://www.linkedin.com/in/karim-shehata-74b15b178/"><img src="https://img.icons8.com/color/48/000000/linkedin.png"/></a>
+  <a href="https://www.youtube.com/c/ArabHackSploit"><img src="https://img.icons8.com/color/48/000000/youtube-play.png"/></a>
 </div>
 
 ***
