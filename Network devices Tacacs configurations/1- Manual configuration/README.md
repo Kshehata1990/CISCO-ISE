@@ -248,6 +248,20 @@ To view live logs, you can navigate to the Operations tab in the Cisco ISE inter
 By regularly reviewing the reports and live logs, you can ensure that your TACACS+ server is working correctly and identify any issues or errors as soon as they occur. This can help you quickly resolve any problems and maintain the security and integrity of your network.
 ![Step 31 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/feab3cab-97f8-40b9-be7e-fc2aba719f97/6d4812bb-4e56-43c9-a6f4-52498265cd1b.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
+## Conclusion
+In conclusion, the configuration guidelines provided in this document are based on the CCNP Security Identity Management (SISE 300-715) certification guide, as well as on the CIS Cisco IOS 16 Benchmark recommendations for the management plane. By following these guidelines, network administrators can be confident that their TACACS+ configuration is aligned with best practices for network security.
+
+Please note that this document is intended to serve as a general guide only, and that the specific configuration requirements for the network environment may vary. It is the responsibility of the network administrator to ensure that all appropriate precautions are taken to protect the network and its users.
+
+It is recommended that switch configuration be performed after office hours to minimize disruption to normal operations. Additionally, it is important to remember to take appropriate precautions, such as saving the current configuration and executing the "reload in 5" command as a precaution, to avoid any data loss, system downtime, or other unforeseen issues.
+
+This document is designed to provide helpful guidance for configuring TACACS+ on network devices. If there are any questions or concerns, qualified network administrators or security professionals can be consulted.
+
+## Reference:
+
+[1] CCNP Security Identity Management (SISE 300-715) cert guide Part VII Device Administration AAA  
+[2] Center for Internet Security. (2022). CIS Cisco IOS 16 Benchmark Recommendations Management Plane.  
+https://www.cisecurity.org/benchmark/cisco
 
 ***
 
