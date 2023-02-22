@@ -1,0 +1,138 @@
+######################################## Onboarding Network devices to ISE ########################################
+
+							================================================================================
+							===                                                                          ===
+							===              * WARNING * WARNING * WARNING * WARNING *                   ===
+							===             == before starting switch configuration ==                   ===
+							===             ===========================================                  ===
+							===                                                                          ===
+							===                                                                          ===
+							===   1- make sure configuration is done by a local user with 15 priv        ===
+							===   2- write memory to save the current configuration                      ===
+							===   3- Export configuration backup                                         ===
+							===   4- execute command "reload in 5" as percution if configuration fail    ===
+							===   5- ISE configuration is ready                                          ===
+							===                                                                          ===
+							===                                                                          ===
+							================================================================================
+
+========================================================
+>>> 1- Define Tacacs Servers,secret key and group <<<     
+========================================================
+
+################### if switch usees new commands set ###################
+tacacs server ise
+  address ipv4 <ISE_IP>
+  key <tacas_key>
+  exit
+!
+aaa group server tacacs+ ISE-TACACS
+ server name ise
+ ip tacacs source-interface <interface_name>
+ exit
+!
+
+################### if switch usees old commands set ###################
+tacacs-server host <ISE_IP>
+tacacs-server key <tacas_key>
+aaa group server tacacs+ ISE-TACACS
+ server <ISE_IP>
+ ip tacacs source-interface <interface_name>
+ exit
+!
+
+========================================================
+>>> 2- Define aaa servers list for remote login <<< 
+========================================================
+
+aaa authentication enable default enable
+aaa authorization config-commands
+aaa authentication login VTY-LOGIN local group ISE-TACACS 
+aaa authorization exec VTY-LOGIN local group ISE-TACACS  
+aaa authorization commands 0 VTY-LOGIN local group ISE-TACACS  if-authenticated 
+aaa authorization commands 1 VTY-LOGIN local group ISE-TACACS  if-authenticated 
+aaa authorization commands 15 VTY-LOGIN local group ISE-TACACS  if-authenticated
+aaa accounting exec VTY-LOGIN start-stop group ISE-TACACS
+aaa accounting commands 0 VTY-LOGIN start-stop group ISE-TACACS
+aaa accounting commands 1 VTY-LOGIN start-stop group ISE-TACACS
+aaa accounting commands 15 VTY-LOGIN start-stop group ISE-TACACS
+!
+
+=======================================================
+>>> 3- Define aaa servers list for console login <<<
+=======================================================
+
+aaa authentication login con-login local group ISE-TACACS
+aaa authorization exec con-login local 
+aaa authorization commands 0 con-login group ISE-TACACS local if-authenticated
+aaa authorization commands 1 con-login group ISE-TACACS local if-authenticated
+aaa authorization commands 15 con-login group ISE-TACACS local if-authenticated
+!
+
+===============================================
+>>> 4- Apply aaa configuration on console <<<
+===============================================
+line con 0
+ accounting commands 0 VTY-LOGIN
+ accounting commands 15 VTY-LOGIN
+ accounting exec VTY-LOGIN
+ logging synchronous
+ login authentication con-login
+ authorization commands 15 con-login
+ authorization exec con-login
+!
+
+===============================================
+>>> 5- Apply aaa configuration on VTY lines <<<
+===============================================
+
+line vty 0 4
+ authorization commands 15 VTY-LOGIN
+ authorization exec VTY-LOGIN
+ accounting commands 0 VTY-LOGIN
+ accounting commands 15 VTY-LOGIN
+ accounting exec VTY-LOGIN
+ logging synchronous
+ transport input ssh
+ login authentication VTY-LOGIN
+ 
+!
+line vty 5 15
+ authorization commands 15 VTY-LOGIN
+ authorization exec VTY-LOGIN
+ accounting commands 0 VTY-LOGIN
+ accounting commands 15 VTY-LOGIN
+ accounting exec VTY-LOGIN
+ logging synchronous
+ transport input ssh
+ login authentication VTY-LOGIN
+ exit
+!
+
+===========================================
+>>> 6- Remove old ACS aaa configuration <<<
+===========================================
+!
+no aaa authentication login default local group tacacs+ 
+no aaa authorization exec default local group tacacs+ 
+no aaa authorization commands 0 default local group tacacs+ 
+no aaa authorization commands 1 default group tacacs+ local 
+no aaa authorization commands 15 default local group tacacs+ 
+no aaa accounting exec default start-stop group tacacs+
+no aaa accounting commands 0 default start-stop group tacacs+
+no aaa accounting commands 1 default start-stop group tacacs+
+no aaa accounting commands 15 default start-stop group tacacs+
+!
+
+=============================================================
+>>> 7- Test Configuration with ISE username and password <<<
+=============================================================
+
+test aaa group ISE-TACACS <ise_username> <ise_password> legacy
+
+
+====================================================================================================================
+>>> 8- if Attempting authentication test to server-group ISE-TACACS using tacacs+ was successfully authenticated <<<
+====================================================================================================================
+reload cancel
+write memory and export new configuration
