@@ -5,8 +5,8 @@
 - [Cisco ISE Configuration](#cisco-ise-configuration)
 - [Cisco Switch Configuration](#cisco-switch-configuration)
 - [Verification](#verification)
-- [Conclusion](#Conclusion)
-- [Reference](#Reference)
+- [Conclusion](#conclusion)
+- [Reference](#reference)
 
 <div align="right">
 <a href="https://www.linkedin.com/in/karim-shehata-74b15b178/"> 
@@ -327,7 +327,7 @@ debug aaa authorization
 debug aaa accounting
 ```
 
-## ${\textcolor{blue} {Conclusion}}$ <a name="Conclusion"></a>
+## ${\textcolor{blue} {Conclusion}}$ <a name="conclusion"></a>
 
 
 <p align="justify">
@@ -341,7 +341,7 @@ This document is designed to provide helpful guidance for configuring TACACS+ on
 </p>
 
 
-## ${\textcolor{blue} {Reference}}$ <a name="Reference"></a>
+## ${\textcolor{blue} {Reference}}$ <a name="reference"></a>
 
 [1] CCNP Security Identity Management (SISE 300-715) cert guide Part VII Device Administration AAA  
 [2] Center for Internet Security. (2022). CIS Cisco IOS 16 Benchmark Recommendations Management Plane.  
