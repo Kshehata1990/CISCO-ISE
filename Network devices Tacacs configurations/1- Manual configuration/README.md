@@ -1,7 +1,17 @@
-# [ISE Network devices TACACS administrations](https://app.tango.us/app/workflow/dbbbcba1-330c-412e-8a83-b0c194465712?utm_source=markdown&utm_medium=markdown&utm_campaign=workflow%20export%20links)
-
 __Creation Date:__ February 22, 2023  
 __Created By:__ Karim Shehata  
+
+ 
+## Table of Contents
+
+- [Introduction](#ise-network-device-tacacs-administration)
+- [Cisco ISE Configuration](#Cisco ISE Configuration)
+- [Usage](#ise-network-device-tacacs-administration)
+- [Contributing](#contributing)
+- [License](#license)
+
+
+## {#ise-network-device-tacacs-administration}[ISE Network devices TACACS administrations](https://app.tango.us/app/workflow/dbbbcba1-330c-412e-8a83-b0c194465712?utm_source=markdown&utm_medium=markdown&utm_campaign=workflow%20export%20links) 
 
 
 TACACS+ (Terminal Access Controller Access-Control System Plus) is a security protocol that is used to provide centralized authentication, authorization, and accounting services for network devices. TACACS+ allows network administrators to control access to their network devices by using a centralized server to manage user and device authentication and authorization.
@@ -71,56 +81,56 @@ Policy elements and conditions are used to define the attributes and characteris
 ![Step 9 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/d8932562-85e7-437e-b5b5-b656d687492a/ae32aa4c-28b5-444e-9426-fb3587e1733b.png?crop=focalpoint&fit=crop&fp-x=0.2452&fp-y=0.4042&fp-z=2.0395&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
-### 10. Here is an example of Device type
+### Here is an example of Device type
 ![Step 10 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/8920c2b7-2548-4b9b-92f3-01c2b231f164/5c7a1a7d-47a2-40bf-8159-655d2efc2251.png?crop=focalpoint&fit=crop&fp-x=0.5503&fp-y=0.4985&fp-z=2.0000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
-### 11. Here is an example of User Identity
+### Here is an example of User Identity
 ![Step 11 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/fdef793c-74c2-4b6f-a5a7-6bbb3737041c/33f27e4d-bbe1-4b75-8de0-5cf338807dec.png?crop=focalpoint&fit=crop&fp-x=0.3178&fp-y=0.6548&fp-z=3.0000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
-### 12. Navigate to Policy Elements >> TACACS+ command sets
+### 10. Navigate to Policy Elements >> TACACS+ command sets
 Once you have created the policy element conditions, you can start creating TACACS+ command sets. TACACS+ command sets contain a set of commands that can be performed on a network device, and they are used to define the level of access that a user is granted.
 
 By creating TACACS+ command sets, you can define the level of access that a user is granted on a network device. For example, you might create a full privilege command set for network administrators and a show commands only command set for network operators. This can help ensure that users have the appropriate level of access to perform their tasks, while also reducing the risk of unauthorized access or misconfigurations.
 ![Step 12 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/12176de1-6183-4ef7-86f6-874283e221a3/043c5e92-a265-4519-9e0f-45e89668dd2a.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
-### 13. Here is an example of a full privilege TACACS+ command set
+### Here is an example of a full privilege TACACS+ command set
 ![Step 13 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/b25ddaa2-b9cf-4b55-8c35-25f3beff7cca/59083dcb-8102-4abb-900d-3ba9d3ccf778.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
-### 14. Here is an example of a Show privilege TACACS+ command set
+### Here is an example of a Show privilege TACACS+ command set
 ![Step 14 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/55176bf4-a73b-4160-99cf-c38550aa0b94/cc3f4725-377a-4897-b87e-750143f078b5.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
-### 15. Navigate to Policy Elements >> TACACS Profiles
+### 11. Navigate to Policy Elements >> TACACS Profiles
 After creating policy elements conditions and TACACS+ command sets, the next step is to create TACACS+ profiles . By default, you can use default shell profile. However, it is recommended that you create new profiles for your different user groups, rather than modifying the default shell profile. This will help you to keep track of which profile is associated with which user group, and make it easier to manage and update your TACACS+ policies in the future.
 ![Step 15 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/af95b209-e386-4377-ae7c-08a87c07f2a0/e5a1caa2-11d9-4bd1-88d1-1f1db1d1faf3.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
-### 16. Here is an example of a Full privilege TACACS Profile
+### Here is an example of a Full privilege TACACS Profile
 ![Step 16 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/181f671f-e570-43b1-8c05-22eef93bf163/82206c61-8067-44f2-a363-77c31762e5ae.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
-### 17. Here is an example of a SHOW privilege TACACS Profile
+### Here is an example of a SHOW privilege TACACS Profile
 ![Step 17 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/b3f00cee-5a8b-43f0-9a89-16bf2292d980/e93389a3-eaea-4212-b4db-020bd9c395ee.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
-### 18. Navigate to Device Admin policy Sets and create new policy
+### 12. Navigate to Device Admin policy Sets and create new policy
 After creating the policy elements, command sets, and TACACS+ profiles, the next step is to create policy sets that combine all of these attributes and conditions into a comprehensive policy. Policy sets are used to define the specific conditions and attributes that should be used for a particular group of users or devices. For example, you might create a policy set that applies to all network administrators, which includes a specific TACACS+ command set, authentication policies, and authorization policies. By creating policy sets, you can define the specific conditions and attributes that should be used for a particular group of users or devices.
 ![Step 18 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/9a1ab8d9-39fa-481e-ad10-fd02381d576a/2c7cbf8b-8c51-4325-b99c-e2411d0b3972.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
-### 19. Click on  Authentication Policy (2)
+### 12. Click on  Authentication Policy 
 ![Step 19 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/7635bb89-694e-4164-a8cb-dc504ff1d907/86ce6711-a003-4a0a-896e-72ce8ff2295c.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
-### 20. Here is an example of an Authentication policy
+### Here is an example of an Authentication policy
 ![Step 20 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/ac42d02d-b98a-4d87-828e-6cb815f27c89/63ce9c51-1d47-42a0-bd52-56ff2b809505.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
-### 21. Here is an examples of an Authorization policy
+### Here is an examples of an Authorization policy
 ![Step 21 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/4a4af820-80d9-4b26-8e27-539b447060e4/2caddc03-c86b-46f8-b1ea-2b216b322f66.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 ***
@@ -136,7 +146,7 @@ After creating the policy elements, command sets, and TACACS+ profiles, the next
 Additionally, it is recommended that switch configuration be performed after office hours to minimize disruption to normal operations. Failure to take these precautions can result in data loss, system downtime, or other unforeseen issues. Please proceed with caution and consult with a qualified expert if needed
 
 
-### 23. Define TACACS Servers, secret key and group for new command sets
+### 1. Define TACACS Servers, secret key and group for new command sets
 ```
 tacacs server ise 
 address ipv4 <ISE_IP> 
@@ -150,7 +160,7 @@ exit
 !
 ```
 
-### 24. Define TACACS Servers, secret key and group for old command sets
+### 2. Define TACACS Servers, secret key and group for old command sets
 ```
 tacacs-server host <ISE_IP>
 tacacs-server key <tacas_key>
@@ -161,7 +171,7 @@ exit
 !
 ```
 
-### 25. Define AAA servers list for remote login
+### 3. Define AAA servers list for remote login
 ```
 aaa authentication enable default enable
 aaa authorization config-commands
@@ -177,7 +187,7 @@ aaa accounting commands 15 VTY-LOGIN start-stop group ISE-TACACS
 !
 ```
 
-### 26. Define AAA servers list for console login
+### 4. Define AAA servers list for console login
 ```
 aaa authentication login con-login local group ISE-TACACS
 aaa authorization exec con-login local
@@ -187,7 +197,7 @@ aaa authorization commands 15 con-login group ISE-TACACS local if-authenticated
 !
 ```
 
-### 27. Apply AAA configuration on console login
+### 5. Apply AAA configuration on console login
 ```
 line con 0
 accounting commands 0 VTY-LOGIN
@@ -201,7 +211,7 @@ exit
 !
 ```
 
-### 28. Apply AAA configuration on VTY lines
+### 6. Apply AAA configuration on VTY lines
 ```
 line vty 0 4
 authorization commands 15 VTY-LOGIN
@@ -227,18 +237,18 @@ exit
 !
 ```
 
-### 29. Test Configuration with ISE username and password
+### 7. Test Configuration with ISE username and password
 ```
 test aaa group ISE-TACACS <ise_username> <ise_password> legacy
 ```
 
-### 30. if Attempting authentication test to server-group ISE-TACACS using tacacs+ was successfully authenticated 
+### 8. if Attempting authentication test to server-group ISE-TACACS using tacacs+ was successfully authenticated 
 ```
 reload cancel
 write memory
 ```
 
-### 31. To verify the configuration Navigate to Reports >> Device Administration Reports
+### To verify the configuration Navigate to Reports >> Device Administration Reports
 Once you have finished the configuration on your TACACS+ server using Cisco ISE, you can use the Reports section and live logs to verify that the configuration is working correctly.
 
 In the Reports section, you can view reports on authentication and authorization activities, as well as reports on TACACS+ device administration activity. You can use these reports to identify any issues or errors that may be occurring in the TACACS+ process.
