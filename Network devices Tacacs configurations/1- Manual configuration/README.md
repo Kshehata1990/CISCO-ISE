@@ -1,6 +1,6 @@
+***
 # $${\Large\color{red} Cisco\space ISE\space Network\space Devices\space Administration}$$
-
-## ${\textcolor{red} {Table \ of \ Contents: \}}$
+## ${\textcolor{red} {Table \ of \ Contents \}}$
 - [Introduction](#device-tacacs-administration)
 - [Cisco ISE Configuration](#cisco-ise-configuration)
 - [Cisco Switch Configuration](#cisco-switch-configuration)
@@ -14,6 +14,7 @@
 </a> 
 </div>
 
+***
 
 ## ${\textcolor{red} {Devices \ TACACS \ Administrations \}}$<a name="device-tacacs-administration"></a>
 <p align="justify">
@@ -28,8 +29,6 @@ The configuration process on the network device involves setting up the TACACS+ 
 By following the instructions in this document, network administrators can configure TACACS+ on their network devices to improve security, manage access to devices, and maintain detailed logs of authentication, authorization, and accounting activities.
 </p>
 
-
-***
 ## ${\textcolor{red} {Cisco \ ISE \ Configuration \}}$ <a name="cisco-ise-configuration"></a>
 
 
@@ -176,7 +175,7 @@ For example, you might create a policy set that applies to all network administr
 
 ![Step 21 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/4a4af820-80d9-4b26-8e27-539b447060e4/2caddc03-c86b-46f8-b1ea-2b216b322f66.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
-***
+
 ## ${\textcolor{red} {Cisco \ Switch \ Configuration \}}$ <a name="cisco-switch-configuration"></a>
 
  
@@ -347,7 +346,7 @@ This document is designed to provide helpful guidance for configuring TACACS+ on
 [2] Center for Internet Security. (2022). CIS Cisco IOS 16 Benchmark Recommendations Management Plane.  
 https://www.cisecurity.org/benchmark/cisco
 
-
+***
 
 <div align="center">
   <a href="https://www.linkedin.com/in/karim-shehata-74b15b178/"><img src="https://img.icons8.com/color/48/000000/linkedin.png"/></a>
