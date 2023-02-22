@@ -4,15 +4,13 @@ __Created By:__ Karim Shehata
  
 ## Table of Contents
 
-- [Introduction](#ISE Network devices TACACS administrations)
-- [Cisco ISE Configuration](#Cisco ISE Configuration)
-- [Usage](#ise-network-device-tacacs-administration)
+- [ISE Network devices TACACS administrations]({#ise-network-device-tacacs-administration})
+- [Cisco ISE Configuration]({#cisco-ise-configuration})
+- [Cisco Switch Configuration]({#cisco-switch-configuration})
 - [Conclusion](#Conclusion)
 - [Reference](#Reference)
 
-
-## [ISE Network devices TACACS administrations] 
-
+## [ISE Network devices TACACS administrations](https://www.youtube.com/channel/UChYZfbY3bskumyaL7t0NQ4w) <a name="ise-network-device-tacacs-administration"></a>
 
 TACACS+ (Terminal Access Controller Access-Control System Plus) is a security protocol that is used to provide centralized authentication, authorization, and accounting services for network devices. TACACS+ allows network administrators to control access to their network devices by using a centralized server to manage user and device authentication and authorization.
 
@@ -27,7 +25,7 @@ By following the instructions in this document, network administrators can confi
 
 
 ***
-# [Cisco ISE Configuration](https://www.youtube.com/channel/UChYZfbY3bskumyaL7t0NQ4w)
+# [Cisco ISE Configuration](https://www.youtube.com/channel/UChYZfbY3bskumyaL7t0NQ4w) <a name="cisco-ise-configuration"></a>
 
 ### 1. Login to your CISCO ISE 
 
@@ -134,7 +132,7 @@ After creating the policy elements, command sets, and TACACS+ profiles, the next
 ![Step 21 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/4a4af820-80d9-4b26-8e27-539b447060e4/2caddc03-c86b-46f8-b1ea-2b216b322f66.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 ***
-# [Cisco Switch Configuration](https://www.youtube.com/channel/UChYZfbY3bskumyaL7t0NQ4w)
+# [Cisco Switch Configuration](https://www.youtube.com/channel/UChYZfbY3bskumyaL7t0NQ4w) <a name="cisco-switch-configuration"></a>
  
 # Before starting switch configuration, please take the following precautions
 1.  Ensure that the configuration is being done by a local user with level 15 privileges.  
