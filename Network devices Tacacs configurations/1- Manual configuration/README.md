@@ -1,5 +1,9 @@
 # [ISE Network devices TACACS administrations](https://app.tango.us/app/workflow/dbbbcba1-330c-412e-8a83-b0c194465712?utm_source=markdown&utm_medium=markdown&utm_campaign=workflow%20export%20links)
 
+__Creation Date:__ February 22, 2023  
+__Created By:__ Karim Shehata  
+
+
 TACACS+ (Terminal Access Controller Access-Control System Plus) is a security protocol that is used to provide centralized authentication, authorization, and accounting services for network devices. TACACS+ allows network administrators to control access to their network devices by using a centralized server to manage user and device authentication and authorization.
 
 Configuring TACACS+ on network devices is a two-step process that involves making the configuration on the TACACS+ server and making the configuration on the network device itself. This document provides step-by-step guides for configuring TACACS+ on a Cisco Identity Services Engine (ISE) server, as well as on a Cisco network device.
@@ -10,12 +14,12 @@ The configuration process on the network device involves setting up the TACACS+ 
 
 By following the instructions in this document, network administrators can configure TACACS+ on their network devices to improve security, manage access to devices, and maintain detailed logs of authentication, authorization, and accounting activities.
 
-__Creation Date:__ February 22, 2023  
-__Created By:__ Hossam Zonkol  
-[View most recent version on Tango](https://app.tango.us/app/workflow/dbbbcba1-330c-412e-8a83-b0c194465712?utm_source=markdown&utm_medium=markdown&utm_campaign=workflow%20export%20links)
-***
 
-### 1. [Login to your CISCO ISE ](https://172.16.1.21/admin/#home/users_device_administration)
+
+***
+# [Cisco ISE Configuration](https://www.youtube.com/channel/UChYZfbY3bskumyaL7t0NQ4w)
+
+### 1. Login to your CISCO ISE 
 
 
 ### 2. Navigate to Work Center >> Device Administration >>> User Identity Groups
@@ -119,33 +123,24 @@ After creating the policy elements, command sets, and TACACS+ profiles, the next
 ### 21. Here is an examples of an Authorization policy
 ![Step 21 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/4a4af820-80d9-4b26-8e27-539b447060e4/2caddc03-c86b-46f8-b1ea-2b216b322f66.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
-
-### 22. Switches configuration steps 
-\*\*\* WARNING \*\*\* WARNING \*\*\* WARNING \*\*\* WARNING \*\*\*WARNING \*\*\*WARNING \*\*\*
-
-Before starting switch configuration, please take the following precautions:
-
-\*\*\* WARNING \*\*\* WARNING \*\*\* WARNING \*\*\* WARNING \*\*\*WARNING \*\*\*WARNING \*\*\*
-
-1.  Ensure that the configuration is being done by a local user with level 15 privileges.
-    
+***
+# [Cisco Switch Configuration](https://www.youtube.com/channel/UChYZfbY3bskumyaL7t0NQ4w)
+ 
+# Before starting switch configuration, please take the following precautions
+1.  Ensure that the configuration is being done by a local user with level 15 privileges.  
 2.  Write the memory to save the current configuration.
-    
-3.  Export a configuration backup.
-    
-4.  Execute the command "reload in 10" as a precaution if the configuration fails.
-    
+3.  Export a configuration backup.   
+4.  Execute the command "reload in 10" as a precaution if the configuration fails.  
 5.  Confirm that the ISE configuration is complete and accurate.
     
-
 Additionally, it is recommended that switch configuration be performed after office hours to minimize disruption to normal operations. Failure to take these precautions can result in data loss, system downtime, or other unforeseen issues. Please proceed with caution and consult with a qualified expert if needed
 
 
 ### 23. Define TACACS Servers, secret key and group for new command sets
 ```
 tacacs server ise 
-address ipv4 <ISE\_IP> 
-key <tacas\_key> 
+address ipv4 <ISE_IP> 
+key <tacas_key> 
 exit 
 ! 
 aaa group server tacacs+ ISE-TACACS 
@@ -156,138 +151,92 @@ exit
 ```
 
 ### 24. Define TACACS Servers, secret key and group for old command sets
-tacacs-server host <ISE\_IP>
-
-tacacs-server key <tacas\_key>
-
+```
+tacacs-server host <ISE_IP>
+tacacs-server key <tacas_key>
 aaa group server tacacs+ ISE-TACACS
-
-server <ISE\_IP>
-
-ip tacacs source-interface <interface\_name>
-
+server <ISE_IP>
+ip tacacs source-interface <interface_name>
 exit
-
 !
-
+```
 
 ### 25. Define AAA servers list for remote login
+```
 aaa authentication enable default enable
-
 aaa authorization config-commands
-
 aaa authentication login VTY-LOGIN local group ISE-TACACS
-
 aaa authorization exec VTY-LOGIN local group ISE-TACACS
-
 aaa authorization commands 0 VTY-LOGIN local group ISE-TACACS if-authenticated
-
 aaa authorization commands 1 VTY-LOGIN local group ISE-TACACS if-authenticated
-
 aaa authorization commands 15 VTY-LOGIN local group ISE-TACACS if-authenticated
-
 aaa accounting exec VTY-LOGIN start-stop group ISE-TACACS
-
 aaa accounting commands 0 VTY-LOGIN start-stop group ISE-TACACS
-
 aaa accounting commands 1 VTY-LOGIN start-stop group ISE-TACACS
-
 aaa accounting commands 15 VTY-LOGIN start-stop group ISE-TACACS
-
 !
-
+```
 
 ### 26. Define AAA servers list for console login
+```
 aaa authentication login con-login local group ISE-TACACS
-
 aaa authorization exec con-login local
-
 aaa authorization commands 0 con-login group ISE-TACACS local if-authenticated
-
 aaa authorization commands 1 con-login group ISE-TACACS local if-authenticated
-
 aaa authorization commands 15 con-login group ISE-TACACS local if-authenticated
-
 !
-
+```
 
 ### 27. Apply AAA configuration on console login
+```
 line con 0
-
 accounting commands 0 VTY-LOGIN
-
 accounting commands 15 VTY-LOGIN
-
 accounting exec VTY-LOGIN
-
 logging synchronous
-
 login authentication con-login
-
 authorization commands 15 con-login
-
 authorization exec con-login
-
 exit
-
 !
+```
 
-
-### 28. Apply AAA configuration on VTY lines 
+### 28. Apply AAA configuration on VTY lines
+```
 line vty 0 4
-
 authorization commands 15 VTY-LOGIN
-
 authorization exec VTY-LOGIN
-
 accounting commands 0 VTY-LOGIN
-
 accounting commands 15 VTY-LOGIN
-
 accounting exec VTY-LOGIN
-
 logging synchronous
-
 transport input ssh
-
 login authentication VTY-LOGIN
-
 exit
-
 !
-
 line vty 5 15
-
 authorization commands 15 VTY-LOGIN
-
 authorization exec VTY-LOGIN
-
 accounting commands 0 VTY-LOGIN
-
 accounting commands 15 VTY-LOGIN
-
 accounting exec VTY-LOGIN
-
 logging synchronous
-
 transport input ssh
-
 login authentication VTY-LOGIN
-
 exit
-
 !
-
+```
 
 ### 29. Test Configuration with ISE username and password
-test aaa group ISE-TACACS <ise\_username> <ise\_password> legacy
-
+```
+test aaa group ISE-TACACS <ise_username> <ise_password> legacy
+```
 
 ### 30. if Attempting authentication test to server-group ISE-TACACS using tacacs+ was successfully authenticated 
+```
 reload cancel
-
 write memory
-
+```
 
 ### 31. To verify the configuration Navigate to Reports >> Device Administration Reports
 Once you have finished the configuration on your TACACS+ server using Cisco ISE, you can use the Reports section and live logs to verify that the configuration is working correctly.
@@ -301,4 +250,4 @@ By regularly reviewing the reports and live logs, you can ensure that your TACAC
 
 
 ***
-_[This Workflow was created with Tango](https://app.tango.us/app/workflow/dbbbcba1-330c-412e-8a83-b0c194465712?utm_source=markdown&utm_medium=markdown&utm_campaign=workflow%20export%20links)_
+
