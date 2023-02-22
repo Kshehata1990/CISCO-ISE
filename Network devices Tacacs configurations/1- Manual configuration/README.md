@@ -1,8 +1,7 @@
 #### <em>__Creation Date:__ February 22, 2023</em>  
 #### <em>__Created By:__ Karim Shehata</em>  
 
- 
-# Table of Contents
+
 
 - [Introduction]({#ise-network-device-tacacs-administration})
 - [Cisco ISE Configuration]({#cisco-ise-configuration})
@@ -40,6 +39,7 @@ By following the instructions in this document, network administrators can confi
 To ensure effective access control and management of user accounts, it is recommended to create user identity groups in your system. Depending on your organization's requirements, you may want to create multiple user identity groups. For example, you might want to create one user identity group for network administrators and another for systems administrators.
 
 Once you have created the user identity groups, you can use them in policies to control access to specific resources and ensure that only authorized individuals are able to perform certain actions.
+
 ![Step 3 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/03736fcd-2eb6-4f39-9f91-483b8c6de907/3d24850b-d828-4630-950d-d5bc74221936.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
@@ -48,12 +48,14 @@ Once you have created the user identity groups, you can use them in policies to 
 In addition to creating user identity groups for network and system administrators, you may also want to create separate user accounts for network access and for the administrators themselves.
 
 By creating separate user accounts for network access and for the administrators, you can ensure that each user has access only to the resources and permissions that they need to perform their tasks. This can help improve security and reduce the risk of unauthorized access
+
 ![Step 4 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/5fa13cb1-8a47-4c73-8230-db59a4fd4d29/f3c5778d-24ad-468e-b09c-463137d50c1f.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
 ### 5. Assign user group
 
 Remember to assign the appropriate user identity group to each user account so that they are subject to the same access policies and controls as others in their role.
+
 ![Step 5 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/fd81d406-4e39-4dbe-b8f9-d61ff644650d/ffb51a65-0add-492b-8dae-4a077565374c.png?crop=focalpoint&fit=crop&fp-x=0.3992&fp-y=0.7374&fp-z=2.0000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
@@ -64,18 +66,21 @@ After creating user accounts and user identity groups, you can start adding netw
 In this example, we will assume that you want to add edge switches to your system and create two different device groups based on their location: HQ and Branch.
 
 By creating device groups based on location or other relevant criteria, you can improve the organization and management of your network resources. This can help reduce the risk of errors or misconfigurations and make it easier for administrators to perform their tasks.
+
 ![Step 6 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/a686eb6a-b562-4ece-9ae7-43401c7efd13/e1d81d66-a9bc-4be0-a247-a0a00925b482.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
 ### 7. Navigate to Network Resources >> Network Devices
 
 Once you have created the device groups, you can start adding network devices to each group
+
 ![Step 7 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/fc3eee8b-09b5-4dcb-8bd2-ab461eff9d6f/83e40b5f-cf86-4c5c-b70d-08f2e2ee9eea.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
 ### 8. Check to enable TACACS Authentication Settings
 
 It is important to ensure that the TACACS+ key that you enter on the network device is the same key that you configured on your TACACS+ server. This will ensure that the device is successfully authenticated and authorized by the server.
+
 ![Step 8 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/6633440d-d653-4e12-a658-460036949a4a/b9e28a69-6b74-4d8f-a1bc-5c801c140504.png?crop=focalpoint&fit=crop&fp-x=0.5394&fp-y=0.7500&fp-z=2.0000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
@@ -84,6 +89,7 @@ It is important to ensure that the TACACS+ key that you enter on the network dev
 After completing the configuration of user identities and network resources, you can start creating policy elements and conditions to be used in your authentication and authorization policies.
 
 Policy elements and conditions are used to define the attributes and characteristics of users and network resources, such as their roles, locations, device types, and other relevant criteria. These attributes can then be used in your policies to determine which users or devices are granted access to which resources.
+
 ![Step 9 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/d8932562-85e7-437e-b5b5-b656d687492a/ae32aa4c-28b5-444e-9426-fb3587e1733b.png?crop=focalpoint&fit=crop&fp-x=0.2452&fp-y=0.4042&fp-z=2.0395&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
@@ -102,6 +108,7 @@ Policy elements and conditions are used to define the attributes and characteris
 Once you have created the policy element conditions, you can start creating TACACS+ command sets. TACACS+ command sets contain a set of commands that can be performed on a network device, and they are used to define the level of access that a user is granted.
 
 By creating TACACS+ command sets, you can define the level of access that a user is granted on a network device. For example, you might create a full privilege command set for network administrators and a show commands only command set for network operators. This can help ensure that users have the appropriate level of access to perform their tasks, while also reducing the risk of unauthorized access or misconfigurations.
+
 ![Step 12 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/12176de1-6183-4ef7-86f6-874283e221a3/043c5e92-a265-4519-9e0f-45e89668dd2a.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
@@ -118,6 +125,7 @@ By creating TACACS+ command sets, you can define the level of access that a user
 ### 11. Navigate to Policy Elements >> TACACS Profiles
 
 After creating policy elements conditions and TACACS+ command sets, the next step is to create TACACS+ profiles . By default, you can use default shell profile. However, it is recommended that you create new profiles for your different user groups, rather than modifying the default shell profile. This will help you to keep track of which profile is associated with which user group, and make it easier to manage and update your TACACS+ policies in the future.
+
 ![Step 15 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/af95b209-e386-4377-ae7c-08a87c07f2a0/e5a1caa2-11d9-4bd1-88d1-1f1db1d1faf3.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
@@ -134,6 +142,7 @@ After creating policy elements conditions and TACACS+ command sets, the next ste
 ### 12. Navigate to Device Admin policy Sets and create new policy
 
 After creating the policy elements, command sets, and TACACS+ profiles, the next step is to create policy sets that combine all of these attributes and conditions into a comprehensive policy. Policy sets are used to define the specific conditions and attributes that should be used for a particular group of users or devices. For example, you might create a policy set that applies to all network administrators, which includes a specific TACACS+ command set, authentication policies, and authorization policies. By creating policy sets, you can define the specific conditions and attributes that should be used for a particular group of users or devices.
+
 ![Step 18 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/9a1ab8d9-39fa-481e-ad10-fd02381d576a/2c7cbf8b-8c51-4325-b99c-e2411d0b3972.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
