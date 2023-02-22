@@ -1,8 +1,8 @@
-__Creation Date:__ February 22, 2023  
-__Created By:__ Karim Shehata  
+#### <em>__Creation Date:__ February 22, 2023</em>  
+#### <em>__Created By:__ Karim Shehata</em>  
 
  
-## <h1 style="color: blue; font-style: italic;">Table of Contents</h1>
+# Table of Contents
 
 - [Introduction]({#ise-network-device-tacacs-administration})
 - [Cisco ISE Configuration]({#cisco-ise-configuration})
@@ -10,7 +10,7 @@ __Created By:__ Karim Shehata
 - [Conclusion](#Conclusion)
 - [Reference](#Reference)
 
-## [ISE Network devices TACACS administrations](https://www.youtube.com/channel/UChYZfbY3bskumyaL7t0NQ4w) <a name="ise-network-device-tacacs-administration"></a>
+# [<em>Devices TACACS Administrations</em>](https://www.youtube.com/channel/UChYZfbY3bskumyaL7t0NQ4w) <a name="ise-network-device-tacacs-administration"></a>
 
 TACACS+ (Terminal Access Controller Access-Control System Plus) is a security protocol that is used to provide centralized authentication, authorization, and accounting services for network devices. TACACS+ allows network administrators to control access to their network devices by using a centralized server to manage user and device authentication and authorization.
 
@@ -25,16 +25,18 @@ By following the instructions in this document, network administrators can confi
 
 
 ***
-# [Cisco ISE Configuration](https://www.youtube.com/channel/UChYZfbY3bskumyaL7t0NQ4w) <a name="cisco-ise-configuration"></a>
+# [<em>Cisco ISE Configuration</em>](https://www.youtube.com/channel/UChYZfbY3bskumyaL7t0NQ4w) <a name="cisco-ise-configuration"></a>
 
 ### 1. Login to your CISCO ISE 
 
 
 ### 2. Navigate to Work Center >> Device Administration >>> User Identity Groups
+
 ![Step 2 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/a39b7182-a2b4-465a-a3b8-1274e03c6376/261e7ed5-9dae-477b-8969-ae2ce1d18f17.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
 ### 3. Add User Identity Groups
+
 To ensure effective access control and management of user accounts, it is recommended to create user identity groups in your system. Depending on your organization's requirements, you may want to create multiple user identity groups. For example, you might want to create one user identity group for network administrators and another for systems administrators.
 
 Once you have created the user identity groups, you can use them in policies to control access to specific resources and ensure that only authorized individuals are able to perform certain actions.
@@ -42,6 +44,7 @@ Once you have created the user identity groups, you can use them in policies to 
 
 
 ### 4. Navigate to Identities and Click Add 
+
 In addition to creating user identity groups for network and system administrators, you may also want to create separate user accounts for network access and for the administrators themselves.
 
 By creating separate user accounts for network access and for the administrators, you can ensure that each user has access only to the resources and permissions that they need to perform their tasks. This can help improve security and reduce the risk of unauthorized access
@@ -49,11 +52,13 @@ By creating separate user accounts for network access and for the administrators
 
 
 ### 5. Assign user group
+
 Remember to assign the appropriate user identity group to each user account so that they are subject to the same access policies and controls as others in their role.
 ![Step 5 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/fd81d406-4e39-4dbe-b8f9-d61ff644650d/ffb51a65-0add-492b-8dae-4a077565374c.png?crop=focalpoint&fit=crop&fp-x=0.3992&fp-y=0.7374&fp-z=2.0000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
 ### 6. Navigate to Network Resources >> Network Device Groups
+
 After creating user accounts and user identity groups, you can start adding network resources to your system. To make it easier to manage and segregate your network devices, it is recommended to create network device groups.
 
 In this example, we will assume that you want to add edge switches to your system and create two different device groups based on their location: HQ and Branch.
@@ -63,16 +68,19 @@ By creating device groups based on location or other relevant criteria, you can 
 
 
 ### 7. Navigate to Network Resources >> Network Devices
+
 Once you have created the device groups, you can start adding network devices to each group
 ![Step 7 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/fc3eee8b-09b5-4dcb-8bd2-ab461eff9d6f/83e40b5f-cf86-4c5c-b70d-08f2e2ee9eea.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
 ### 8. Check to enable TACACS Authentication Settings
+
 It is important to ensure that the TACACS+ key that you enter on the network device is the same key that you configured on your TACACS+ server. This will ensure that the device is successfully authenticated and authorized by the server.
 ![Step 8 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/6633440d-d653-4e12-a658-460036949a4a/b9e28a69-6b74-4d8f-a1bc-5c801c140504.png?crop=focalpoint&fit=crop&fp-x=0.5394&fp-y=0.7500&fp-z=2.0000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
 ### 9. Navigate to Policy Elements >> Library conditions
+
 After completing the configuration of user identities and network resources, you can start creating policy elements and conditions to be used in your authentication and authorization policies.
 
 Policy elements and conditions are used to define the attributes and characteristics of users and network resources, such as their roles, locations, device types, and other relevant criteria. These attributes can then be used in your policies to determine which users or devices are granted access to which resources.
@@ -80,14 +88,17 @@ Policy elements and conditions are used to define the attributes and characteris
 
 
 ### Here is an example of Device type
+
 ![Step 10 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/8920c2b7-2548-4b9b-92f3-01c2b231f164/5c7a1a7d-47a2-40bf-8159-655d2efc2251.png?crop=focalpoint&fit=crop&fp-x=0.5503&fp-y=0.4985&fp-z=2.0000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
 ### Here is an example of User Identity
+
 ![Step 11 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/fdef793c-74c2-4b6f-a5a7-6bbb3737041c/33f27e4d-bbe1-4b75-8de0-5cf338807dec.png?crop=focalpoint&fit=crop&fp-x=0.3178&fp-y=0.6548&fp-z=3.0000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
 ### 10. Navigate to Policy Elements >> TACACS+ command sets
+
 Once you have created the policy element conditions, you can start creating TACACS+ command sets. TACACS+ command sets contain a set of commands that can be performed on a network device, and they are used to define the level of access that a user is granted.
 
 By creating TACACS+ command sets, you can define the level of access that a user is granted on a network device. For example, you might create a full privilege command set for network administrators and a show commands only command set for network operators. This can help ensure that users have the appropriate level of access to perform their tasks, while also reducing the risk of unauthorized access or misconfigurations.
@@ -95,44 +106,53 @@ By creating TACACS+ command sets, you can define the level of access that a user
 
 
 ### Here is an example of a full privilege TACACS+ command set
+
 ![Step 13 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/b25ddaa2-b9cf-4b55-8c35-25f3beff7cca/59083dcb-8102-4abb-900d-3ba9d3ccf778.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
 ### Here is an example of a Show privilege TACACS+ command set
+
 ![Step 14 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/55176bf4-a73b-4160-99cf-c38550aa0b94/cc3f4725-377a-4897-b87e-750143f078b5.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
 ### 11. Navigate to Policy Elements >> TACACS Profiles
+
 After creating policy elements conditions and TACACS+ command sets, the next step is to create TACACS+ profiles . By default, you can use default shell profile. However, it is recommended that you create new profiles for your different user groups, rather than modifying the default shell profile. This will help you to keep track of which profile is associated with which user group, and make it easier to manage and update your TACACS+ policies in the future.
 ![Step 15 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/af95b209-e386-4377-ae7c-08a87c07f2a0/e5a1caa2-11d9-4bd1-88d1-1f1db1d1faf3.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
 ### Here is an example of a Full privilege TACACS Profile
+
 ![Step 16 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/181f671f-e570-43b1-8c05-22eef93bf163/82206c61-8067-44f2-a363-77c31762e5ae.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
 ### Here is an example of a SHOW privilege TACACS Profile
+
 ![Step 17 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/b3f00cee-5a8b-43f0-9a89-16bf2292d980/e93389a3-eaea-4212-b4db-020bd9c395ee.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
 ### 12. Navigate to Device Admin policy Sets and create new policy
+
 After creating the policy elements, command sets, and TACACS+ profiles, the next step is to create policy sets that combine all of these attributes and conditions into a comprehensive policy. Policy sets are used to define the specific conditions and attributes that should be used for a particular group of users or devices. For example, you might create a policy set that applies to all network administrators, which includes a specific TACACS+ command set, authentication policies, and authorization policies. By creating policy sets, you can define the specific conditions and attributes that should be used for a particular group of users or devices.
 ![Step 18 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/9a1ab8d9-39fa-481e-ad10-fd02381d576a/2c7cbf8b-8c51-4325-b99c-e2411d0b3972.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
 ### 12. Click on  Authentication Policy 
+
 ![Step 19 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/7635bb89-694e-4164-a8cb-dc504ff1d907/86ce6711-a003-4a0a-896e-72ce8ff2295c.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
 ### Here is an example of an Authentication policy
+
 ![Step 20 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/ac42d02d-b98a-4d87-828e-6cb815f27c89/63ce9c51-1d47-42a0-bd52-56ff2b809505.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
 ### Here is an examples of an Authorization policy
+
 ![Step 21 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/4a4af820-80d9-4b26-8e27-539b447060e4/2caddc03-c86b-46f8-b1ea-2b216b322f66.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 ***
-# [Cisco Switch Configuration](https://www.youtube.com/channel/UChYZfbY3bskumyaL7t0NQ4w) <a name="cisco-switch-configuration"></a>
+# [<em>Cisco Switch Configuration</em>](https://www.youtube.com/channel/UChYZfbY3bskumyaL7t0NQ4w) <a name="cisco-switch-configuration"></a>
  
 # Before starting switch configuration, please take the following precautions
 1.  Ensure that the configuration is being done by a local user with level 15 privileges.  
@@ -145,6 +165,7 @@ Additionally, it is recommended that switch configuration be performed after off
 
 
 ### 1. Define TACACS Servers, secret key and group for new command sets
+
 ```
 tacacs server ise 
 address ipv4 <ISE_IP> 
@@ -159,6 +180,7 @@ exit
 ```
 
 ### 2. Define TACACS Servers, secret key and group for old command sets
+
 ```
 tacacs-server host <ISE_IP>
 tacacs-server key <tacas_key>
@@ -170,6 +192,7 @@ exit
 ```
 
 ### 3. Define AAA servers list for remote login
+
 ```
 aaa authentication enable default enable
 aaa authorization config-commands
@@ -186,6 +209,7 @@ aaa accounting commands 15 VTY-LOGIN start-stop group ISE-TACACS
 ```
 
 ### 4. Define AAA servers list for console login
+
 ```
 aaa authentication login con-login local group ISE-TACACS
 aaa authorization exec con-login local
@@ -196,6 +220,7 @@ aaa authorization commands 15 con-login group ISE-TACACS local if-authenticated
 ```
 
 ### 5. Apply AAA configuration on console login
+
 ```
 line con 0
 accounting commands 0 VTY-LOGIN
@@ -210,6 +235,7 @@ exit
 ```
 
 ### 6. Apply AAA configuration on VTY lines
+
 ```
 line vty 0 4
 authorization commands 15 VTY-LOGIN
@@ -236,17 +262,20 @@ exit
 ```
 
 ### 7. Test Configuration with ISE username and password
+
 ```
 test aaa group ISE-TACACS <ise_username> <ise_password> legacy
 ```
 
 ### 8. if Attempting authentication test to server-group ISE-TACACS using tacacs+ was successfully authenticated 
+
 ```
 reload cancel
 write memory
 ```
 
 ### To verify the configuration Navigate to Reports >> Device Administration Reports
+
 Once you have finished the configuration on your TACACS+ server using Cisco ISE, you can use the Reports section and live logs to verify that the configuration is working correctly.
 
 In the Reports section, you can view reports on authentication and authorization activities, as well as reports on TACACS+ device administration activity. You can use these reports to identify any issues or errors that may be occurring in the TACACS+ process.
@@ -256,7 +285,7 @@ To view live logs, you can navigate to the Operations tab in the Cisco ISE inter
 By regularly reviewing the reports and live logs, you can ensure that your TACACS+ server is working correctly and identify any issues or errors as soon as they occur. This can help you quickly resolve any problems and maintain the security and integrity of your network.
 ![Step 31 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/feab3cab-97f8-40b9-be7e-fc2aba719f97/6d4812bb-4e56-43c9-a6f4-52498265cd1b.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
-## Conclusion
+## [<em>Conclusion</em>](https://www.youtube.com/channel/UChYZfbY3bskumyaL7t0NQ4w)
 In conclusion, the configuration guidelines provided in this document are based on the CCNP Security Identity Management (SISE 300-715) certification guide, as well as on the CIS Cisco IOS 16 Benchmark recommendations for the management plane. By following these guidelines, network administrators can be confident that their TACACS+ configuration is aligned with best practices for network security.
 
 Please note that this document is intended to serve as a general guide only, and that the specific configuration requirements for the network environment may vary. It is the responsibility of the network administrator to ensure that all appropriate precautions are taken to protect the network and its users.
@@ -265,7 +294,7 @@ It is recommended that switch configuration be performed after office hours to m
 
 This document is designed to provide helpful guidance for configuring TACACS+ on network devices. If there are any questions or concerns, qualified network administrators or security professionals can be consulted.
 
-## Reference:
+## [<em>Reference</em>](https://www.youtube.com/channel/UChYZfbY3bskumyaL7t0NQ4w)
 
 [1] CCNP Security Identity Management (SISE 300-715) cert guide Part VII Device Administration AAA  
 [2] Center for Internet Security. (2022). CIS Cisco IOS 16 Benchmark Recommendations Management Plane.  
