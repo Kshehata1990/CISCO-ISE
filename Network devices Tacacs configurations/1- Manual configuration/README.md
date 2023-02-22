@@ -2,7 +2,7 @@ __Creation Date:__ February 22, 2023
 __Created By:__ Karim Shehata  
 
  
-## Table of Contents
+## <h1 style="color: blue; font-style: italic;">Table of Contents</h1>
 
 - [Introduction]({#ise-network-device-tacacs-administration})
 - [Cisco ISE Configuration]({#cisco-ise-configuration})
