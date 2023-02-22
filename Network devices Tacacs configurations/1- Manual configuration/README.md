@@ -1,9 +1,9 @@
  ##### [<em>__Created By:__ Karim Shehata</em>](https://www.linkedin.com/in/karim-shehata-74b15b178/)
  ##### <em>__Creation Date:__ February 22, 2023</em> 
 
-- [Introduction]({#device-tacacs-administration})
-- [Cisco ISE Configuration]({#cisco-ise-configuration})
-- [Cisco Switch Configuration]({#cisco-switch-configuration})
+- [Introduction](#device-tacacs-administration)
+- [Cisco ISE Configuration](#cisco-ise-configuration)
+- [Cisco Switch Configuration](#cisco-switch-configuration)
 - [Verification](#verification)
 - [Conclusion](#Conclusion)
 - [Reference](#Reference)
