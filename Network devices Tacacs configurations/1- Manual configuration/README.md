@@ -142,8 +142,18 @@ Additionally, it is recommended that switch configuration be performed after off
 
 
 ### 23. Define TACACS Servers, secret key and group for new command sets
-tacacs server ise address ipv4 <ISE\_IP> key <tacas\_key> exit ! aaa group server tacacs+ ISE-TACACS server name ise ip tacacs source-interface <interface\_name> exit !
-
+```
+tacacs server ise 
+address ipv4 <ISE\_IP> 
+key <tacas\_key> 
+exit 
+! 
+aaa group server tacacs+ ISE-TACACS 
+server name ise 
+ip tacacs source-interface <interface_name> 
+exit 
+!
+```
 
 ### 24. Define TACACS Servers, secret key and group for old command sets
 tacacs-server host <ISE\_IP>
