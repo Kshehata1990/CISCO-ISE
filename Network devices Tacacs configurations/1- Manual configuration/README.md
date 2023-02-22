@@ -10,7 +10,7 @@
 - [Reference](#Reference)
 
 # [<em>Devices TACACS Administrations</em>](https://www.youtube.com/channel/UChYZfbY3bskumyaL7t0NQ4w) <a name="ise-network-device-tacacs-administration"></a>
-
+<p style="text-align: justify;">
 TACACS+ (Terminal Access Controller Access-Control System Plus) is a security protocol that is used to provide centralized authentication, authorization, and accounting services for network devices. TACACS+ allows network administrators to control access to their network devices by using a centralized server to manage user and device authentication and authorization.
 
 Configuring TACACS+ on network devices is a two-step process that involves making the configuration on the TACACS+ server and making the configuration on the network device itself. This document provides step-by-step guides for configuring TACACS+ on a Cisco Identity Services Engine (ISE) server, as well as on a Cisco network device.
@@ -21,7 +21,7 @@ The configuration process on the network device involves setting up the TACACS+ 
 
 By following the instructions in this document, network administrators can configure TACACS+ on their network devices to improve security, manage access to devices, and maintain detailed logs of authentication, authorization, and accounting activities.
 
-
+</p>
 
 ***
 # [<em>Cisco ISE Configuration</em>](https://www.youtube.com/channel/UChYZfbY3bskumyaL7t0NQ4w) <a name="cisco-ise-configuration"></a>
