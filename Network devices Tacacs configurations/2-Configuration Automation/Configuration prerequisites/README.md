@@ -3,7 +3,7 @@
 ## ${\textcolor{red} {Table \ of \ Contents \}}$
 - [Introduction](#Introduction)
 - [Cisco ISE Preparation](#cisco-ise-configuration)
-- [Cisco Switch Configuration](#cisco-switch-configuration)
+- [Cisco Switch Preparation](#cisco-switch-configuration)
 - [ON-Boarding requirements](#file-requirements)
 - [Conclusion](#conclusion)
 
@@ -23,7 +23,7 @@ This document provides a comprehensive guide on the prerequisite preparations re
 To successfully run the Python script, it is essential to ensure that the environment is appropriately configured and that the Cisco switches and Cisco ISE are correctly set up. This document provides step-by-step instructions for preparing the environment, configuring the Cisco switches, configuring Cisco ISE, and running the Python script.
 </p>
 
-## ${\textcolor{red} {Cisco \ ISE \ Configuration \}}$ <a name="cisco-ise-configuration"></a>  
+## ${\textcolor{red} {Cisco \ ISE \ Preparation \}}$ <a name="cisco-ise-configuration"></a>  
 <p align="justify">
 Enabling external RESTful services on Cisco ISE is essential for allowing the Python script to interact with Cisco ISE and perform necessary tasks such as creating network access devices and managing policies.
 
@@ -60,7 +60,7 @@ In this section of the document, you will find step-by-step instructions with sc
 
 
 ### 6. Verify the configuration by Postman and python script  
-```
+```python
 import requests
 
 url = "https://<ISE-IP>:9060/ers/config/networkdevice"
@@ -71,7 +71,7 @@ print(response.text)
 ![Step 8 screenshot](https://images.tango.us/workflows/875f1bff-2400-482c-8055-8a6bc3ee3d9f/steps/720ec1d8-6083-4485-947f-cc692e5ae231/72186a46-e6b6-4714-8256-6394b246d081.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
-## ${\textcolor{red} {Cisco \ Switch \ Configuration \}}$ <a name="cisco-switch-configuration"></a>  
+## ${\textcolor{red} {Cisco \ Switch \ Preparation \}}$ <a name="cisco-switch-configuration"></a>  
 <p align="justify"> 
 Cisco switches should be prepared for onboarding by configuring the necessary settings. Remote accessibility via SSH should be enabled, and a local user account for configuration purposes should be created. Additionally, it is recommended that the local user account is set up to log in directly to exec mode and not enable mode.
 
@@ -79,7 +79,7 @@ If a local user account is not present on the Cisco switch, a Python script can 
 </p>  
 
 ###  Python script to add local user on the switches  
-```
+```python
 from netmiko import ConnectHandler
 
 first_switch_ip = '<switch_IP>'
@@ -88,6 +88,7 @@ ip_list = [".".join(first_switch_ip.split(".")[:3]) + "." + str(i) for i in
            range(int(first_switch_ip.split(".")[-1]), int(last_switch_ip.split(".")[-1]) + 1)]
 for ip in ip_list:
     try:
+ 
         if ip in [<list of ips you want to execlude>]:
             continue
         else:
@@ -96,12 +97,10 @@ for ip in ip_list:
             locol_password = "<>"
             login_username = '<>'
             login_password = '<>'
-            switch = {'device_type': 'cisco_ios', 'ip': ip, 'username': login_username,
-                      'password': login_password}
+            switch = {'device_type': 'cisco_ios', 'ip': ip, 'username': login_username,'password': login_password}
             connect_to_switch = ConnectHandler(**switch)
             connect_to_switch.send_command('configure terminal', expect_string=r"#")
-            connect_to_switch.send_command(f'username {local_username} privilege 15 secret             {local_password}', expect_string=r"#",strip_prompt=False, strip_command=False)
-           
+            connect_to_switch.send_command(f'username {local_username} privilege 15 secret{local_password}', expect_string=r"#",strip_prompt=False)
             connect_to_switch.disconnect()
             
     except Exception as error:
@@ -133,9 +132,33 @@ ${\textcolor{green} {15. \ Exclude \ Switch \ List:}}$ The list of switches' IP 
 ${\textcolor{green} {16. \ Start \ IP:}}$ The start IP address for the switches list must be specified.   
 ${\textcolor{green} {17. \ End \ IP:}}$ The end IP address for the switches list must be specified.  
  
-Ensure that you have all the required parameters before running the Python script for onboarding your Cisco switches to Cisco ISE. Failure to provide these parameters may result in errors or unsuccessful onboarding of the switches. 
-</p>
-
+Ensure that you have all the required parameters before running the Python script for onboarding your Cisco switches to Cisco ISE and fill the onboarding requirements json file. Failure to provide these parameters may result in errors or unsuccessful onboarding of the switches. 
+</p>  
+ 
+```json  
+ 
+ {
+  "config_backup_folder": "<backup folder to save the configuration before and after deployment>",
+  "switches_local_username": "<username of a local user with privilege 15>",
+  "switches_local_user_password": "<password of a local user>",
+  "switches_source_interface_vlan": "<sitches interface vlan to communicate with ise(SVI name)>",
+  "ACS_username": "<cisco acs  or local username>",
+  "ACS_password": "<cisco acs or local password>",
+  "TACACS_KEY": "<tacacs secret key>",
+  "ISE_IP": "<ISE ip address and must be reachable from the switch>",
+  "ISE_ERSADMIN_username": "<ERSADMIN username to login to ISE>",
+  "ISE_ERSADMIN_password": "<ERSADMIN password to login to ISE>",
+  "network_device_group_location": "<location you which to add the network device keep in mind the tree representation should be represented by '#' sign EX: #HQ#EdgeSW>",
+  "network_device_group_type": "<type you which to add the network device keep in mind the tree representation should be represented by '#' sign EX: #Cisco#EdgeSW>",
+  "ISE_TACACS_username_check": "<TACACS username configured on ISE for verifying the configuration>",
+  "ISE_TACACS_password_check": "<TACACS password for the configured username on ISE for verifying the configuration>",
+  "exclude_switch_list":"<list of switches ips to be excluded from onboarding EX: ['1.1.1.1','1.1.1.2']>",
+  "start_ip": "<switches list start ip>",
+  "end_ip": "<switches list start ip>"
+ }  
+ 
+```  
+ 
 ## ${\textcolor{red} {Conclusion}}$ <a name="conclusion"></a>
 <p align="justify">
 Onboarding Cisco switches to Cisco ISE using a Python script requires careful preparation to ensure a smooth and successful onboarding process. This document has provided comprehensive guidelines for the prerequisite preparations required before running the Python script, including preparing the environment, configuring the Cisco switches, and configuring Cisco ISE.
@@ -146,5 +169,12 @@ By following the instructions provided in this document, you can configure the n
 
 In conclusion, following the guidelines outlined in this document will help you successfully onboard your Cisco switches to Cisco ISE using a Python script. 
 </p>
+
+***  
+ 
+<div align="center">
+  <a href="https://www.linkedin.com/in/karim-shehata-74b15b178/"><img src="https://img.icons8.com/color/48/000000/linkedin.png"/></a>
+  <a href="https://www.youtube.com/c/ArabHackSploit"><img src="https://img.icons8.com/color/48/000000/youtube-play.png"/></a>
+</div>
 
 ***
