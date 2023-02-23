@@ -16,7 +16,7 @@
 
 ***
 
-## Introduction
+## ${\textcolor{red} {Introduction}}$ <a name="Introduction"></a>
 This document provides a comprehensive guide on the prerequisite preparations required to onboard Cisco switches to Cisco ISE using a Python script. The document outlines the steps necessary to prepare the environment, Cisco switches, and Cisco ISE for the onboarding process, including configuring the necessary settings and setting up the required credentials.
 
 To successfully run the Python script, it is essential to ensure that the environment is appropriately configured and that the Cisco switches and Cisco ISE are correctly set up. This document provides step-by-step instructions for preparing the environment, configuring the Cisco switches, configuring Cisco ISE, and running the Python script.
