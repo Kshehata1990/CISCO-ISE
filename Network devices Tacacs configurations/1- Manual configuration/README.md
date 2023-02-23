@@ -220,7 +220,6 @@ exit
 
 ```
 aaa authentication enable default enable
-aaa authorization config-commands
 aaa authentication login VTY-LOGIN local group ISE-TACACS
 aaa authorization exec VTY-LOGIN local group ISE-TACACS
 aaa authorization commands 0 VTY-LOGIN local group ISE-TACACS if-authenticated
