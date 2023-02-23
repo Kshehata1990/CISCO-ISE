@@ -1,8 +1,8 @@
 ***
 # $${\Large\color{red} Cisco\space ISE\space Onboarding\space Readiness\space Guide}$$
 ## ${\textcolor{red} {Table \ of \ Contents \}}$
-- [Introduction](#device-tacacs-administration)
-- [Cisco ISE Configuration](#cisco-ise-configuration)
+- [Introduction](#Introduction)
+- [Cisco ISE Preparation](#Cisco ISE Preparation)
 - [Cisco Switch Configuration](#cisco-switch-configuration)
 - [Verification](#verification)
 - [Conclusion](#conclusion)
@@ -111,28 +111,28 @@ for ip in ip_list:
 
 Before running the Python script to onboard your Cisco switches to Cisco ISE, you need to ensure that you have the following prerequisites in place:
 
-${\textcolor{green} {1. \ Configuration \ backup \ folder:}}$ The backup folder where the configuration will be saved before and after deployment.  
-${\textcolor{green} {2. \ Switches \ Local \ Username:}}$ The username of a local user account on the Cisco switches with privilege level 15.  
-${\textcolor{green} {3. \ Switches \ Local \ User \ Password:}}$ The password for the local user account on the Cisco switches.  
-${\textcolor{green} {4. \ Switches \ Source \ Interface \ VLAN:}}$ The VLAN interface used by the switches to communicate with ISE (SVI name).    
-${\textcolor{green} {5. \ ACS \ Username:}}$ The username for the Cisco ACS or local user account.  
-${\textcolor{green} {6. \ ACS \ Password:}}$ The password for the Cisco ACS or local user account.  
-${\textcolor{green} {7. \ TACACS \ Key:}}$ The TACACS secret key.  
-${\textcolor{green} {8. \ ISE \ IP \ Address:}}$ The IP address of the Cisco ISE server that the switches will be onboarded to. The ISE server must be reachable from the switches.  
-${\textcolor{green} {9. \ ISE \ ERSADMIN \ Username:}}$ The ERSADMIN username used to log in to Cisco ISE.  
-${\textcolor{green} {10. \ ISE \ ERSADMIN \ Password:}}$ The ERSADMIN password used to log in to Cisco ISE.  
-${\textcolor{green} {11. \ Network \ Device \ Group \ Location:}}$ The location to add the network device in Cisco ISE, represented by the '#' sign in the tree structure. For example, #HQ#EdgeSW.  
-${\textcolor{green} {12. \ Network \ Device \ Group \ Type:}}$ The device type to be added in Cisco ISE, represented by the '#' sign in the tree structure. For example, #Cisco#EdgeSW.  
-${\textcolor{green} {13. \ ISE \ TACACS \ Username \ for \ Verification:}}$ The TACACS username configured on Cisco ISE for verifying the configuration.  
-${\textcolor{green} {14. \ ISE \ TACACS \ Password \ for \ Verification:}}$ The TACACS password for the configured username on Cisco ISE for verifying the configuration.  
-${\textcolor{green} {15. \ Exclude \ Switch \ List:}}$ A list of switch IP addresses to be excluded from onboarding. For example, ['1.1.1.1', '1.1.1.2'].
-${\textcolor{green} {16. \ Start \ IP:}}$ The starting IP address for the list of Cisco switches to be onboarded.
-${\textcolor{green} {17. \ End \ IP:}}$ The ending IP address for the list of Cisco switches to be onboarded.
+${\textcolor{green} {1. \ Configuration \ backup \ folder:}}$ The folder where the switch configurations will be backed up before and after the deployment process is specified.    
+${\textcolor{green} {2. \ Switches \ Local \ Username:}}$ The username of a local user account on the switch with privilege level 15 is required.    
+${\textcolor{green} {3. \ Switches \ Local \ User \ Password:}}$  The password for the local user account on the switch is necessary.    
+${\textcolor{green} {4. \ Switches \ Source \ Interface \ VLAN:}}$ The VLAN interface on the switch that will be used to communicate with Cisco ISE must be defined.   
+${\textcolor{green} {5. \ ACS \ Username:}}$ The username for the Cisco ACS or local user account used to authenticate users and devices needs to be provided.  
+${\textcolor{green} {6. \ ACS \ Password:}}$ The password for the Cisco ACS or local user account must be specified.  
+${\textcolor{green} {7. \ TACACS \ Key:}}$ The secret key used for TACACS+ authentication between the switch and Cisco ISE should be defined.  
+${\textcolor{green} {8. \ ISE \ IP \ Address:}}$ The IP address for the Cisco ISE must be provided and should be reachable from the switch.  
+${\textcolor{green} {9. \ ISE \ ERSADMIN \ Username:}}$ The ERSADMIN username used to login to ISE must be defined.  
+${\textcolor{green} {10. \ ISE \ ERSADMIN \ Password:}}$ The ERSADMIN password used to login to ISE should be specified.  
+${\textcolor{green} {11. \ Network \ Device \ Group \ Location:}}$ The location to add the network device, keeping in mind the tree representation should be represented by the "#" sign, must be specified.  
+${\textcolor{green} {12. \ Network \ Device \ Group \ Type:}}$ The type to add the network device, keeping in mind the tree representation should be represented by the "#" sign, must be defined.  
+${\textcolor{green} {13. \ ISE \ TACACS \ Username \ for \ Verification:}}$ The TACACS username configured on ISE for verifying the configuration should be provided.  
+${\textcolor{green} {14. \ ISE \ TACACS \ Password \ for \ Verification:}}$ The TACACS password for the configured username on ISE for verifying the configuration must be defined.  
+${\textcolor{green} {15. \ Exclude \ Switch \ List:}}$ The list of switches' IP addresses to be excluded from onboarding, if any, should be provided.  
+${\textcolor{green} {16. \ Start \ IP:}}$ The start IP address for the switches list must be specified.   
+${\textcolor{green} {17. \ End \ IP:}}$ The end IP address for the switches list must be specified.  
+ 
+Ensure that you have all the required parameters before running the Python script for onboarding your Cisco switches to Cisco ISE. Failure to provide these parameters may result in errors or unsuccessful onboarding of the switches.
 
-Ensure that you have all the required parameters before running the Python script for onboarding your Cisco switches to Cisco ISE. Failure to provide these 19parameters may result in errors or unsuccessful onboarding of the switches.
 
-
-## 1Conclusion
+## Conclusion
 
 Onboarding Cisco switches to Cisco ISE using a Python script requires careful preparation to ensure a smooth and successful onboarding process. This document has provided comprehensive guidelines for the prerequisite preparations required before running the Python script, including preparing the environment, configuring the Cisco switches, and configuring Cisco ISE.
 
