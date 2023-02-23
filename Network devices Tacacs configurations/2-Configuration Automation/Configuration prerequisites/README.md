@@ -16,21 +16,23 @@
 
 ***
 
-## ${\textcolor{red} {Introduction}}$ <a name="Introduction"></a>
+## ${\textcolor{red} {Introduction}}$ <a name="Introduction"></a>  
+<p align="justify">
 This document provides a comprehensive guide on the prerequisite preparations required to onboard Cisco switches to Cisco ISE using a Python script. The document outlines the steps necessary to prepare the environment, Cisco switches, and Cisco ISE for the onboarding process, including configuring the necessary settings and setting up the required credentials.
 
 To successfully run the Python script, it is essential to ensure that the environment is appropriately configured and that the Cisco switches and Cisco ISE are correctly set up. This document provides step-by-step instructions for preparing the environment, configuring the Cisco switches, configuring Cisco ISE, and running the Python script.
+</p>
 
-
-## ${\textcolor{red} {Cisco \ ISE \ Configuration \}}$ <a name="cisco-ise-configuration"></a>
+## ${\textcolor{red} {Cisco \ ISE \ Configuration \}}$ <a name="cisco-ise-configuration"></a>  
+<p align="justify">
 Enabling external RESTful services on Cisco ISE is essential for allowing the Python script to interact with Cisco ISE and perform necessary tasks such as creating network access devices and managing policies.
 
 Creating a user with the appropriate group permissions is crucial to ensure that the Python script has the necessary permissions to access and modify Cisco ISE's settings.
 
 Performing a basic readiness test allows you to verify that the RESTful service is properly configured and that the user has the appropriate permissions to perform the required tasks.
 
-In this section of the document, you will find step-by-step instructions with screenshots for configuring Cisco ISE, including enabling external RESTful services, creating a user with the appropriate group permissions, and performing a basic readiness test. By following these instructions, you will be able to configure Cisco ISE to work with the Python script and onboard your Cisco switches successfully.
-
+In this section of the document, you will find step-by-step instructions with screenshots for configuring Cisco ISE, including enabling external RESTful services, creating a user with the appropriate group permissions, and performing a basic readiness test. By following these instructions, you will be able to configure Cisco ISE to work with the Python script and onboard your Cisco switches successfully.  
+</p>
 
 ### 1. Login to Cisco ISE and navigate to Administration >> Settings
 
@@ -69,12 +71,12 @@ print(response.text)
 ![Step 8 screenshot](https://images.tango.us/workflows/875f1bff-2400-482c-8055-8a6bc3ee3d9f/steps/720ec1d8-6083-4485-947f-cc692e5ae231/72186a46-e6b6-4714-8256-6394b246d081.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
-## ${\textcolor{red} {Cisco \ Switch \ Configuration \}}$ <a name="cisco-switch-configuration"></a>
- 
+## ${\textcolor{red} {Cisco \ Switch \ Configuration \}}$ <a name="cisco-switch-configuration"></a>  
+<p align="justify"> 
 Cisco switches should be prepared for onboarding by configuring the necessary settings. Remote accessibility via SSH should be enabled, and a local user account for configuration purposes should be created. Additionally, it is recommended that the local user account is set up to log in directly to exec mode and not enable mode.
 
 If a local user account is not present on the Cisco switch, a Python script can be used to create one. This ensures that a user account with the appropriate permissions is in place to configure the switch.
-
+</p>  
 
 ###  Python script to add local user on the switches  
 ```
@@ -108,9 +110,10 @@ for ip in ip_list:
 ```
 
 
-## ${\textcolor{red} {ONBoarding \ requirements \ file \}}$ <a name="file-requirements"></a>
+## ${\textcolor{red} {ONBoarding \ requirements \ file \}}$ <a name="file-requirements"></a>  
 
-Before running the Python script to onboard your Cisco switches to Cisco ISE, you need to ensure that you have the following prerequisites in place:
+### Before running the Python script to onboard your Cisco switches to Cisco ISE, you need to ensure that you have the following prerequisites in place:
+<p align="justify">
 
 ${\textcolor{green} {1. \ Configuration \ backup \ folder:}}$ The folder where the switch configurations will be backed up before and after the deployment process is specified.    
 ${\textcolor{green} {2. \ Switches \ Local \ Username:}}$ The username of a local user account on the switch with privilege level 15 is required.    
@@ -130,18 +133,18 @@ ${\textcolor{green} {15. \ Exclude \ Switch \ List:}}$ The list of switches' IP 
 ${\textcolor{green} {16. \ Start \ IP:}}$ The start IP address for the switches list must be specified.   
 ${\textcolor{green} {17. \ End \ IP:}}$ The end IP address for the switches list must be specified.  
  
-Ensure that you have all the required parameters before running the Python script for onboarding your Cisco switches to Cisco ISE. Failure to provide these parameters may result in errors or unsuccessful onboarding of the switches.
-
+Ensure that you have all the required parameters before running the Python script for onboarding your Cisco switches to Cisco ISE. Failure to provide these parameters may result in errors or unsuccessful onboarding of the switches. 
+</p>
 
 ## ${\textcolor{red} {Conclusion}}$ <a name="conclusion"></a>
-
+<p align="justify">
 Onboarding Cisco switches to Cisco ISE using a Python script requires careful preparation to ensure a smooth and successful onboarding process. This document has provided comprehensive guidelines for the prerequisite preparations required before running the Python script, including preparing the environment, configuring the Cisco switches, and configuring Cisco ISE.
 
 To prepare the environment for the Python script, it is essential to install the necessary Python packages, configure network connectivity, and set up the required credentials. Configuring the Cisco switches involves enabling remote access via SSH, creating a local user account, and setting up necessary certificates. Configuring Cisco ISE involves enabling external RESTful services, creating a user with the appropriate group permissions, and performing a basic readiness test.
 
 By following the instructions provided in this document, you can configure the necessary settings and credentials, ensuring a smooth onboarding experience. Additionally, the document includes troubleshooting tips for common issues that may arise during the onboarding process.
 
-In conclusion, following the guidelines outlined in this document will help you successfully onboard your Cisco switches to Cisco ISE using a Python script.
-
+In conclusion, following the guidelines outlined in this document will help you successfully onboard your Cisco switches to Cisco ISE using a Python script. 
+</p>
 
 ***
