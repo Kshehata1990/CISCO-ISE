@@ -288,7 +288,7 @@ exit
 #### 7. Test Configuration with ISE username and password
 
 ```
-test aaa group ISE-TACACS <ise_username> <ise_password> legacy
+test aaa group ISE-TACACS <ise_tacacs_username> <ise_tacas_password> legacy
 ```
 
 #### 8. if Attempting authentication test to server-group ISE-TACACS using tacacs+ was successfully authenticated 
@@ -318,7 +318,7 @@ By regularly reviewing the reports, live logs, and using debug commands, you can
 
 #### Switch debug commands 
 
-```
+```bash
 terminal monitor 
 debug aaa authentication 
 debug aaa authorization 
