@@ -100,7 +100,7 @@ for ip in ip_list:
             switch = {'device_type': 'cisco_ios', 'ip': ip, 'username': login_username,'password': login_password}
             connect_to_switch = ConnectHandler(**switch)
             connect_to_switch.send_command('configure terminal', expect_string=r"#")
-            connect_to_switch.send_command(f'username {local_username} privilege 15 secret{local_password}', expect_string=r"#",strip_prompt=False)
+            connect_to_switch.send_command(f'username {local_username} privilege 15 secret {local_password}', expect_string=r"#",strip_prompt=False)
             connect_to_switch.disconnect()
             
     except Exception as error:
