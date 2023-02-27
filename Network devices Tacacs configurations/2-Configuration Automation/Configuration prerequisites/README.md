@@ -132,12 +132,28 @@ ${\textcolor{green} {15. \ Exclude \ Switch \ List:}}$ The list of switches' IP 
 ${\textcolor{green} {16. \ Start \ IP:}}$ The start IP address for the switches list must be specified.   
 ${\textcolor{green} {17. \ End \ IP:}}$ The end IP address for the switches list must be specified.  
  
-Ensure that you have all the required parameters before running the Python script for onboarding your Cisco switches to Cisco ISE and fill the onboarding requirements json file. Failure to provide these parameters may result in errors or unsuccessful onboarding of the switches. 
+Ensure that you have all the required parameters before running the Python script for onboarding your Cisco switches to Cisco ISE . Failure to provide these parameters may result in errors or unsuccessful onboarding of the switches. 
 </p>  
+
  
+## Installation and Usage  
+ 
+ This project aims to facilitate the process of onboarding Cisco switches to Cisco ISE for network device administration using TACACS+ through automation using Python code. For organizations with a large number of switches, this can greatly improve efficiency and reduce the likelihood of errors and inconsistencies.
+
+It is important to note that before attempting to automate the process, it is highly recommended to start by adding at least one switch manually and following <a href="https://github.com/Kshehata1990/CISCO-ISE/blob/main/Network devices Tacacs configurations/1- Manual configuration/README.md"> manual configuration guide </a> provided in this repository. This will help ensure that the process is properly understood and that any issues are identified and addressed early on.  
+
+To install this project, you need to have Python 3 and the requests library installed on your system. You also need to have access to a Cisco ISE server with administrator credentials.
+
+To install this project, clone this repository and run the following command:
+
+```bash
+pip install -r requirements.txt  
+```
+
+update the onboarding requirements json file 
+
 ```json  
- 
- {
+{
   "config_backup_folder": "<backup folder to save the configuration before and after deployment>",
   "switches_local_username": "<username of a local user with privilege 15>",
   "switches_local_user_password": "<password of a local user>",
@@ -156,8 +172,12 @@ Ensure that you have all the required parameters before running the Python scrip
   "start_ip": "<switches list start ip>",
   "end_ip": "<switches list start ip>"
  }  
- 
-```  
+```
+
+Run the ise onboarding python file
+```bash 
+python3 ISE-ONboarding.py  
+``` 
  
 ## ${\textcolor{red} {Conclusion}}$ <a name="conclusion"></a>
 <p align="justify">
