@@ -1,0 +1,9 @@
+no aaa authentication login default local group tacacs+
+no aaa authorization exec default local group tacacs+
+no aaa authorization commands 0 default local group tacacs+
+no aaa authorization commands 1 default group tacacs+ local
+no aaa authorization commands 15 default local group tacacs+
+no aaa accounting exec default start-stop group tacacs+
+no aaa accounting commands 0 default start-stop group tacacs+
+no aaa accounting commands 1 default start-stop group tacacs+
+no aaa accounting commands 15 default start-stop group tacacs+

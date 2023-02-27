@@ -1,0 +1,25 @@
+{
+    "NetworkDevice": {
+        "name": "",
+        "description": "",
+        "tacacsSettings": {
+            "sharedSecret": "",
+            "connectModeOptions": "ON_LEGACY",
+            "previousSharedSecret": "",
+            "previousSharedSecretExpiry": 0
+        },
+        "profileName": "Cisco",
+        "coaPort": 1700,
+        "NetworkDeviceIPList": [
+            {
+                "ipaddress": "",
+                "mask": 32
+            }
+        ],
+        "NetworkDeviceGroupList": [
+            "Location#All Locations",
+            "IPSEC#Is IPSEC Device#No",
+            "Device Type#All Device Types"
+        ]
+    }
+}
