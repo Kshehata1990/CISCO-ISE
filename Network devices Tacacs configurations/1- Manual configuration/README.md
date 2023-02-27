@@ -1,6 +1,6 @@
 ***
-# $${\Large\color{red} Cisco\space ISE\space Network\space Devices\space Administration}$$
-## ${\textcolor{red} {Table \ of \ Contents \}}$
+# Cisco ISE Network Devices Administration
+## Table of Contents 
 - [Introduction](#device-tacacs-administration)
 - [Cisco ISE Configuration](#cisco-ise-configuration)
 - [Cisco Switch Configuration](#cisco-switch-configuration)
@@ -16,7 +16,7 @@
 
 ***
 
-## ${\textcolor{red} {Devices \ TACACS \ Administrations \}}$<a name="device-tacacs-administration"></a>
+## Devices TACACS Administrations<a name="device-tacacs-administration"></a>
 <p align="justify">
 TACACS+ (Terminal Access Controller Access-Control System Plus) is a security protocol that is used to provide centralized authentication, authorization, and accounting services for network devices. TACACS+ allows network administrators to control access to their network devices by using a centralized server to manage user and device authentication and authorization.
 
@@ -29,7 +29,7 @@ The configuration process on the network device involves setting up the TACACS+ 
 By following the instructions in this document, network administrators can configure TACACS+ on their network devices to improve security, manage access to devices, and maintain detailed logs of authentication, authorization, and accounting activities.
 </p>
 
-## ${\textcolor{red} {Cisco \ ISE \ Configuration \}}$ <a name="cisco-ise-configuration"></a>
+## Cisco  ISE Configuration  <a name="cisco-ise-configuration"></a>
 
 
 #### 1. Login to your CISCO ISE 
@@ -161,7 +161,7 @@ For example, you might create a policy set that applies to all network administr
 ![Step 18 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/9a1ab8d9-39fa-481e-ad10-fd02381d576a/2c7cbf8b-8c51-4325-b99c-e2411d0b3972.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
-#### 12. Click on  Authentication Policy 
+#### 13. Click on  Authentication Policy 
 
 ![Step 19 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/7635bb89-694e-4164-a8cb-dc504ff1d907/86ce6711-a003-4a0a-896e-72ce8ff2295c.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
@@ -176,7 +176,7 @@ For example, you might create a policy set that applies to all network administr
 ![Step 21 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/4a4af820-80d9-4b26-8e27-539b447060e4/2caddc03-c86b-46f8-b1ea-2b216b322f66.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
-## ${\textcolor{red} {Cisco \ Switch \ Configuration \}}$ <a name="cisco-switch-configuration"></a>
+## Cisco Switch Configuration  <a name="cisco-switch-configuration"></a>
 
  
 ### Before starting switch configuration, please take the following precautions
@@ -298,7 +298,7 @@ reload cancel
 write memory
 ```
 
-## ${\textcolor{red} {Verify \ the \ Configuration \}}$ <a name="verification"></a>
+## Verify the Configuration  <a name="verification"></a>
 
 <p align="justify">
 Once you have finished the configuration on your TACACS+ server using Cisco ISE, you can use the Reports section and live logs to verify that the configuration is working correctly.
@@ -325,7 +325,7 @@ debug aaa authorization
 debug aaa accounting
 ```
 
-## ${\textcolor{red} {Conclusion}}$ <a name="conclusion"></a>
+## Conclusion <a name="conclusion"></a>
 
 
 <p align="justify">
@@ -339,7 +339,7 @@ This document is designed to provide helpful guidance for configuring TACACS+ on
 </p>
 
 
-## ${\textcolor{red} {Reference}}$ <a name="reference"></a>
+## Reference <a name="reference"></a>
 
 [1] CCNP Security Identity Management (SISE 300-715) cert guide Part VII Device Administration AAA  
 [2] Center for Internet Security. (2022). CIS Cisco IOS 16 Benchmark Recommendations Management Plane.  
