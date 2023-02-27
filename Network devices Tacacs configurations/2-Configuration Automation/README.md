@@ -30,3 +30,8 @@ Overall, this project offers a streamlined and automated solution for onboarding
 
 ![code trace](https://github.com/Kshehata1990/CISCO-ISE/blob/main/Network%20devices%20Tacacs%20configurations/2-Configuration%20Automation/1-%20ISE%20switches%20onboarding%20code%20trace.png)  
 
+
+
+
+
+
