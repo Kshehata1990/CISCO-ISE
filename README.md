@@ -31,7 +31,9 @@ This document provides a comprehensive guide on the prerequisite preparations re
 
 To successfully run the Python script, it is essential to ensure that the environment is appropriately configured and that the Cisco switches and Cisco ISE are correctly set up. This document provides step-by-step instructions for preparing the environment, configuring the Cisco switches, configuring Cisco ISE, and running the Python script.
   
-</p>
+</p>  
+
+***   
 
 ## Cisco  ISE  Preparation  <a name="cisco-ise-configuration"></a>  
 <p align="justify">
@@ -78,7 +80,9 @@ headers = {'Accept': 'application/json'}
 response = requests.request("GET", url, headers=headers,  verify=False, auth=('<ERS_ADMIN_username>', '<ERS_ADMIN_password>'))
 print(response.text)
 ```
-![Step 8 screenshot](https://images.tango.us/workflows/875f1bff-2400-482c-8055-8a6bc3ee3d9f/steps/720ec1d8-6083-4485-947f-cc692e5ae231/72186a46-e6b6-4714-8256-6394b246d081.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
+![Step 8 screenshot](https://images.tango.us/workflows/875f1bff-2400-482c-8055-8a6bc3ee3d9f/steps/720ec1d8-6083-4485-947f-cc692e5ae231/72186a46-e6b6-4714-8256-6394b246d081.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)  
+
+***
 
 
 ## Cisco Switch Preparation  <a name="cisco-switch-configuration"></a>  
@@ -118,6 +122,7 @@ for ip in ip_list:
         continue
 ```
 
+***  
 
 ## ONBoarding requirements file  <a name="file-requirements"></a>  
 
@@ -143,8 +148,9 @@ ${\textcolor{green} {16. \ Start \ IP:}}$ The start IP address for the switches 
 ${\textcolor{green} {17. \ End \ IP:}}$ The end IP address for the switches list must be specified.  
  
 Ensure that you have all the required parameters before running the Python script for onboarding your Cisco switches to Cisco ISE . Failure to provide these parameters may result in errors or unsuccessful onboarding of the switches. 
-</p>  
+</p>   
 
+***  
 
 ## Installation and Usage <a name="installation"></a>
   
@@ -192,7 +198,9 @@ pip install -r requirements.txt
 ```bash 
 cd Network devices Tacacs configurations/2-Configuration Automation
 python3 ISE-ONboarding.py  
-``` 
+```  
+
+***
  
 ## Conclusion <a name="conclusion"></a>
 <p align="justify">
