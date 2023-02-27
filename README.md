@@ -189,6 +189,7 @@ pip install -r requirements.txt
 
 ### Run the ise onboarding python file
 ```bash 
+cd Network devices Tacacs configurations/2-Configuration Automation
 python3 ISE-ONboarding.py  
 ``` 
  
