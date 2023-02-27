@@ -1,5 +1,6 @@
 ***
-# Cisco ISE Network Devices Administration
+# Cisco ISE Network Devices Administration  
+***
 ## Table of Contents 
 - [Introduction](#device-tacacs-administration)
 - [Cisco ISE Configuration](#cisco-ise-configuration)
@@ -27,7 +28,10 @@ The configuration process on the Cisco ISE server includes creating user groups 
 The configuration process on the network device involves setting up the TACACS+ authentication method and defining the TACACS+ server information. This document includes instructions on how to configure the TACACS+ settings on a Cisco switch.
 
 By following the instructions in this document, network administrators can configure TACACS+ on their network devices to improve security, manage access to devices, and maintain detailed logs of authentication, authorization, and accounting activities.
-</p>
+</p>  
+
+
+*** 
 
 ## Cisco  ISE Configuration  <a name="cisco-ise-configuration"></a>
 
@@ -175,7 +179,7 @@ For example, you might create a policy set that applies to all network administr
 
 ![Step 21 screenshot](https://images.tango.us/workflows/dbbbcba1-330c-412e-8a83-b0c194465712/steps/4a4af820-80d9-4b26-8e27-539b447060e4/2caddc03-c86b-46f8-b1ea-2b216b322f66.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
-
+***  
 ## Cisco Switch Configuration  <a name="cisco-switch-configuration"></a>
 
  
@@ -297,6 +301,7 @@ test aaa group ISE-TACACS <ise_tacacs_username> <ise_tacas_password> legacy
 reload cancel
 write memory
 ```
+***  
 
 ## Verify the Configuration  <a name="verification"></a>
 
@@ -324,6 +329,7 @@ debug aaa authentication
 debug aaa authorization 
 debug aaa accounting
 ```
+***  
 
 ## Conclusion <a name="conclusion"></a>
 
