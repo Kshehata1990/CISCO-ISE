@@ -66,7 +66,7 @@ In this section of the document, you will find step-by-step instructions with sc
 ![Step 6 screenshot](https://images.tango.us/workflows/875f1bff-2400-482c-8055-8a6bc3ee3d9f/steps/baebbba0-c6e8-456c-bf84-51e6930506ea/568c6a46-a3a3-472f-90fe-d7bb6807f5ea.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
-### 5. Access ERS SDK on "https://<ISE-IP>:9060/ers/sdk"
+### 5. Access ERS SDK on "https://ise:9060/ers/sdk"
 
 ![Step 7 screenshot](https://images.tango.us/workflows/875f1bff-2400-482c-8055-8a6bc3ee3d9f/steps/7fc120ec-3520-4e3e-bb20-5f0cb99901ce/1e4c6a5d-ee71-47df-90c5-d0e9c31715df.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
