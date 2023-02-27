@@ -28,5 +28,5 @@ After adding one switch manually, it is essential to follow the <a href="https:/
 Overall, this project offers a streamlined and automated solution for onboarding Cisco switches to Cisco ISE for network device administration, making it an ideal choice for organizations seeking to improve their network management processes.
 </p>  
 
-![code trace](https://raw.githubusercontent.com/Kshehata1990/CISCO-ISE/main/Network%20devices%20Tacacs%20configurations/2-Configuration%20Automation/1-%20ISE%20switches%20onboarding%20code%20trace.png?token=GHSAT0AAAAAAB6U5XH6QOV2P264RIQMTT5IY74YN3A)  
+![code trace](https://github.com/Kshehata1990/CISCO-ISE/blob/main/Network%20devices%20Tacacs%20configurations/2-Configuration%20Automation/1-%20ISE%20switches%20onboarding%20code%20trace.png)  
 
