@@ -344,6 +344,7 @@ It is recommended that switch configuration be performed after office hours to m
 This document is designed to provide helpful guidance for configuring TACACS+ on network devices. If there are any questions or concerns, qualified network administrators or security professionals can be consulted.
 </p>
 
+*** 
 
 ## Reference <a name="reference"></a>
 
