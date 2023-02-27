@@ -1,8 +1,9 @@
  
 
 ***
-# $${\Large\color{red} Cisco\space ISE\space Onboarding\space Readiness\space Guide}$$
-## ${\textcolor{red} {Table \ of \ Contents \}}$
+# Cisco ISE switches onboarding readiness guide
+
+## Table  of  Contents 
 - [Introduction](#Introduction)
 - [Cisco ISE Preparation](#cisco-ise-configuration)
 - [Cisco Switch Preparation](#cisco-switch-configuration)
@@ -19,7 +20,7 @@
 
 ***
 
-## ${\textcolor{red} {Introduction}}$ <a name="Introduction"></a>  
+## Introduction <a name="Introduction"></a>  
 <p align="justify">
  
 This project aims to facilitate the process of onboarding Cisco switches to Cisco ISE for network device administration using TACACS+ through automation using Python code. For organizations with a large number of switches, this can greatly improve efficiency and reduce the likelihood of errors and inconsistencies.
@@ -32,7 +33,7 @@ To successfully run the Python script, it is essential to ensure that the enviro
   
 </p>
 
-## ${\textcolor{red} {Cisco \ ISE \ Preparation \}}$ <a name="cisco-ise-configuration"></a>  
+## Cisco  ISE  Preparation  <a name="cisco-ise-configuration"></a>  
 <p align="justify">
 Enabling external RESTful services on Cisco ISE is essential for allowing the Python script to interact with Cisco ISE and perform necessary tasks such as creating network access devices and managing policies.
 
@@ -80,7 +81,7 @@ print(response.text)
 ![Step 8 screenshot](https://images.tango.us/workflows/875f1bff-2400-482c-8055-8a6bc3ee3d9f/steps/720ec1d8-6083-4485-947f-cc692e5ae231/72186a46-e6b6-4714-8256-6394b246d081.png?crop=focalpoint&fit=crop&fp-x=0.5000&fp-y=0.5000&w=1200&blend-align=bottom&blend-mode=normal&blend-x=800&blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmsucG5n)
 
 
-## ${\textcolor{red} {Cisco \ Switch \ Preparation \}}$ <a name="cisco-switch-configuration"></a>  
+## Cisco Switch Preparation  <a name="cisco-switch-configuration"></a>  
 <p align="justify"> 
 Cisco switches should be prepared for onboarding by configuring the necessary settings. Remote accessibility via SSH should be enabled, and a local user account for configuration purposes should be created. Additionally, it is recommended that the local user account is set up to log in directly to exec mode and not enable mode.
 
@@ -118,7 +119,7 @@ for ip in ip_list:
 ```
 
 
-## ${\textcolor{red} {ONBoarding \ requirements \ file \}}$ <a name="file-requirements"></a>  
+## ONBoarding requirements file  <a name="file-requirements"></a>  
 
 ### Before running the Python script to onboard your Cisco switches to Cisco ISE, you need to ensure that you have the following prerequisites in place:
 <p align="justify">
@@ -145,7 +146,7 @@ Ensure that you have all the required parameters before running the Python scrip
 </p>  
 
 
-## ${\textcolor{red} {Installation \ and \ Usage}}$ <a name="installation"></a>
+## Installation and Usage <a name="installation"></a>
   
  This project aims to facilitate the process of onboarding Cisco switches to Cisco ISE for network device administration using TACACS+ through automation using Python code. For organizations with a large number of switches, this can greatly improve efficiency and reduce the likelihood of errors and inconsistencies.
 
@@ -193,7 +194,7 @@ cd Network devices Tacacs configurations/2-Configuration Automation
 python3 ISE-ONboarding.py  
 ``` 
  
-## ${\textcolor{red} {Conclusion}}$ <a name="conclusion"></a>
+## Conclusion <a name="conclusion"></a>
 <p align="justify">
 Onboarding Cisco switches to Cisco ISE using a Python script requires careful preparation to ensure a smooth and successful onboarding process. This document has provided comprehensive guidelines for the prerequisite preparations required before running the Python script, including preparing the environment, configuring the Cisco switches, and configuring Cisco ISE.
 
