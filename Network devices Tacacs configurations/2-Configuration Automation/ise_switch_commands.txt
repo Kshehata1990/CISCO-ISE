@@ -1,0 +1,61 @@
+aaa new-model
+aaa group server tacacs+ ISE-TACACS
+server <ise_server_ip>
+ip tacacs source-interface <source_interface_name>
+exit
+aaa group server tacacs+ ISE-TACACS
+server name ise
+ip tacacs source-interface <source_interface_name>
+exit
+aaa authentication enable default enable
+aaa authentication login VTY-LOGIN local group ISE-TACACS
+aaa authorization exec VTY-LOGIN local group ISE-TACACS
+aaa authorization commands 0 VTY-LOGIN local group ISE-TACACS  if-authenticated
+aaa authorization commands 1 VTY-LOGIN local group ISE-TACACS  if-authenticated
+aaa authorization commands 15 VTY-LOGIN local group ISE-TACACS  if-authenticated
+aaa accounting exec VTY-LOGIN start-stop group ISE-TACACS
+aaa accounting commands 0 VTY-LOGIN start-stop group ISE-TACACS
+aaa accounting commands 1 VTY-LOGIN start-stop group ISE-TACACS
+aaa accounting commands 15 VTY-LOGIN start-stop group ISE-TACACS
+aaa authentication login con-login local group ISE-TACACS
+aaa authorization exec con-login local
+aaa authorization commands 0 con-login local group ISE-TACACS  if-authenticated
+aaa authorization commands 1 con-login local group ISE-TACACS  if-authenticated
+aaa authorization commands 15 con-login local group ISE-TACACS  if-authenticated
+tacacs server ise
+address ipv4 <ise_server_ip>
+key <tacacs_key>
+exit
+tacacs-server host <ise_server_ip>
+tacacs-server key <tacacs_key>
+tacacs server ise
+address ipv4 <ise_server_ip>
+key <tacacs_key>
+exit
+line con 0
+accounting commands 0 VTY-LOGIN
+accounting commands 15 VTY-LOGIN
+accounting exec VTY-LOGIN
+logging synchronous
+login authentication con-login
+authorization commands 15 con-login
+authorization exec con-login
+line vty 0 4
+authorization commands 15 VTY-LOGIN
+authorization exec VTY-LOGIN
+accounting commands 0 VTY-LOGIN
+accounting commands 15 VTY-LOGIN
+accounting exec VTY-LOGIN
+logging synchronous
+transport input ssh
+login authentication VTY-LOGIN
+line vty 5 15
+authorization commands 15 VTY-LOGIN
+authorization exec VTY-LOGIN
+accounting commands 0 VTY-LOGIN
+accounting commands 15 VTY-LOGIN
+accounting exec VTY-LOGIN
+logging synchronous
+transport input ssh
+login authentication VTY-LOGIN
+
