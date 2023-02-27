@@ -3,7 +3,7 @@
 # $${\Large\color{red} Cisco\space ISE\space Onboarding\space Switches\space Automation}$$
 ## ${\textcolor{red} {Table \ of \ Contents \}}$
 - [Introduction](#Introduction)
-- [Cisco ISE Preparation](#cisco-ise-configuration)
+- [Installation](#Installation)
 - [Cisco Switch Preparation](#cisco-switch-configuration)
 - [ON-Boarding requirements](#file-requirements)
 - [Conclusion](#conclusion)
@@ -31,7 +31,15 @@ Overall, this project offers a streamlined and automated solution for onboarding
 ![code trace](https://github.com/Kshehata1990/CISCO-ISE/blob/main/Network%20devices%20Tacacs%20configurations/2-Configuration%20Automation/1-%20ISE%20switches%20onboarding%20code%20trace.png)  
 
 
+## ${\textcolor{red} {Installation}}$ <a name="Installation"></a> 
 
+To install this project, you need to have Python 3 and the requests library installed on your system. You also need to have access to a Cisco ISE server with administrator credentials.
+
+To install this project, clone this repository and run the following command:
+
+```bash
+pip install -r requirements.txt  
+```
 
 
 
