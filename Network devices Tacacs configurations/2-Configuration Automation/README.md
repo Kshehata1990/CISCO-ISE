@@ -153,13 +153,13 @@ It is important to note that before attempting to automate the process, it is hi
 
 To install this project, you need to have Python 3 and the requests library installed on your system. You also need to have access to a Cisco ISE server with administrator credentials.
 
-To install this project, clone this repository and run the following command:
+### To install this project, clone this repository and run the following command:
 
 ```bash
 pip install -r requirements.txt  
 ```
 
-update the onboarding requirements json file 
+### update the onboarding requirements json file 
 
 ```json  
 {
@@ -183,7 +183,7 @@ update the onboarding requirements json file
  }  
 ```
 
-Run the ise onboarding python file
+### Run the ise onboarding python file
 ```bash 
 python3 ISE-ONboarding.py  
 ``` 
