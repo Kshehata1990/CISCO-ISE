@@ -151,7 +151,11 @@ Ensure that you have all the required parameters before running the Python scrip
 
 It is important to note that before attempting to automate the process, it is highly recommended to start by adding at least one switch manually and following <a href="https://github.com/Kshehata1990/CISCO-ISE/blob/main/Network devices Tacacs configurations/1- Manual configuration/README.md"> manual configuration guide </a> provided in this repository. This will help ensure that the process is properly understood and that any issues are identified and addressed early on.  
 
-To install this project, you need to have Python 3 and the requests library installed on your system. You also need to have access to a Cisco ISE server with administrator credentials.
+To install this project, you need to have Python 3 and the requests library installed on your system. You also need to have access to a Cisco ISE server with administrator credentials.  
+ 
+![code trace](https://github.com/Kshehata1990/CISCO-ISE/blob/main/Network%20devices%20Tacacs%20configurations/2-Configuration%20Automation/1-%20ISE%20switches%20onboarding%20code%20trace.png)  
+
+ 
 
 ### To install this project, clone this repository and run the following command:
 
