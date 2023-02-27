@@ -41,5 +41,33 @@ To install this project, clone this repository and run the following command:
 pip install -r requirements.txt  
 ```
 
+update the onboarding requirements json file 
+
+```json  
+{
+  "config_backup_folder": "<backup folder to save the configuration before and after deployment>",
+  "switches_local_username": "<username of a local user with privilege 15>",
+  "switches_local_user_password": "<password of a local user>",
+  "switches_source_interface_vlan": "<sitches interface vlan to communicate with ise(SVI name)>",
+  "ACS_username": "<cisco acs  or local username>",
+  "ACS_password": "<cisco acs or local password>",
+  "TACACS_KEY": "<tacacs secret key>",
+  "ISE_IP": "<ISE ip address and must be reachable from the switch>",
+  "ISE_ERSADMIN_username": "<ERSADMIN username to login to ISE>",
+  "ISE_ERSADMIN_password": "<ERSADMIN password to login to ISE>",
+  "network_device_group_location": "<location you which to add the network device keep in mind the tree representation should be represented by '#' sign EX: #HQ#EdgeSW>",
+  "network_device_group_type": "<type you which to add the network device keep in mind the tree representation should be represented by '#' sign EX: #Cisco#EdgeSW>",
+  "ISE_TACACS_username_check": "<TACACS username configured on ISE for verifying the configuration>",
+  "ISE_TACACS_password_check": "<TACACS password for the configured username on ISE for verifying the configuration>",
+  "exclude_switch_list":"<list of switches ips to be excluded from onboarding EX: ['1.1.1.1','1.1.1.2']>",
+  "start_ip": "<switches list start ip>",
+  "end_ip": "<switches list start ip>"
+ }  
+```
+
+Run the ise onboarding python file
+```bash 
+python3 ISE-ONboarding.py  
+```
 
 
